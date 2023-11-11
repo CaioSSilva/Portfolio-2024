@@ -1,0 +1,110 @@
+.grid {
+  gap: 10px;
+}
+.qualification__container {
+  grid-template-columns: repeat(1, 700px);
+  column-gap: 3rem;
+  justify-content: center;
+}
+
+.qualification__content {
+  background-color: var(--container-color);
+  border: 1px solid var(--border-color);
+  border-radius: 1.25rem;
+  padding: 2rem 4rem;
+}
+.qualification__tabs {
+  display: flex;
+  justify-content: center;
+}
+.certification__title {
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  text-align: center;
+}
+.qualification__selection {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-medium);
+  color: var(--title-color);
+  margin: 0 var(--mb-1);
+  cursor: pointer;
+}
+.qualification__selection:hover {
+  color: var(--title-color-dark);
+}
+.qualification__labels {
+  display: flex;
+  align-items: center;
+}
+.qualification__labels h1 {
+  font-size: 16px;
+}
+.certification__name {
+  width: 60%;
+  padding: 10px;
+}
+.certification__date,
+.certification__type {
+  width: 15%;
+  padding: 10px;
+}
+.qualification__filter {
+  display: flex;
+  justify-content: center;
+  width: 10%;
+}
+.qualification__button {
+  display: flex;
+  align-items: center;
+  border-radius: 100%;
+  padding: 10px;
+  color: var(--title-color);
+  background-color: var(--container-color);
+}
+.qualification__button:hover {
+  color: #f3f3f3;
+  background-color: var(--title-color-dark);
+  cursor: pointer;
+}
+.qualification__content_wrapper {
+  height: 300px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.qualification__content_wrapper::-webkit-scrollbar {
+  display: none;
+}
+.qualification__item {
+  display: flex;
+  cursor: pointer;
+  border-top: 0.5px var(--title-color-dark) solid;
+}
+.qualification__item:hover {
+  background-color: var(--title-color-dark);
+}
+.qualification__item p {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  color: var(--title-color);
+}
+.qualification__item:hover p {
+  color: #f3f3f3;
+}
+@media screen and (max-width: 768px) {
+  .qualification__container {
+    grid-template-columns: repeat(1, 450px);
+  }
+  .qualification__content{
+    padding: 2rem 2rem;
+  }
+  .certification__name {
+    width: 50%;
+  }
+  .certification__date,
+  .certification__type {
+    width: 20%;
+  }
+}

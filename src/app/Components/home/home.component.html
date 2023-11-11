@@ -1,0 +1,70 @@
+<section class="home section" id="home">
+  <div class="home__container container grid">
+    <div class="home__content grid">
+      <div class="home__social">
+        <a
+          href="https://www.instagram.com/caios_silvaa/"
+          target="_blank"
+          rel="noreferrer"
+          class="home__social-icon instagram_icon"
+        >
+          <fa-icon [icon]="instaIcon"></fa-icon>
+        </a>
+        <a
+          href="https://github.com/CaioSSilva"
+          target="_blank"
+          rel="noreferrer"
+          class="home__social-icon github_icon"
+        >
+          <fa-icon [icon]="githubIcon"></fa-icon>
+        </a>
+        <a
+          href="https://twitter.com/Caiomas_levanto"
+          target="_blank"
+          rel="noreferrer"
+          class="home__social-icon twitter_icon"
+        >
+          <fa-icon [icon]="twitterIcon"></fa-icon>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/caio-souza-silva/"
+          target="_blank"
+          rel="noreferrer"
+          class="home__social-icon linkedin_icon"
+        >
+          <fa-icon [icon]="linkedinIcon"></fa-icon>
+        </a>
+      </div>
+      <div class="home__img">
+        <app-color></app-color>
+      </div>
+      <div class="home__data">
+        <h1 class="home__title">Caio Souza</h1>
+
+        <h3 class="home__subtitle">Web Developer</h3>
+        <p class="home__description">
+          Software developer, writer, intern at IBM Brazil and passionate to my
+          work!
+        </p>
+
+        <a href="#contact" class="button button--flex">
+          <p>Say Hello</p>
+          <fa-icon
+            [icon]="paperplaneIcon"
+            style="padding-left: 0.8rem"
+          ></fa-icon>
+        </a>
+      </div>
+    </div>
+
+    <div class="home__scroll">
+      <a href="#about" class="home__scroll-button button--flex">
+        <div class="mouse">
+          <div class="scroll"></div>
+        </div>
+        <span class="home__scroll-name">Scroll Down</span>
+        <fa-icon [icon]="arrowdownIcon" class="home__scroll-arrow"></fa-icon>
+      </a>
+    </div>
+  </div>
+</section>

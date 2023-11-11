@@ -1,0 +1,92 @@
+<header class="header">
+  <nav class="nav container">
+    <a href="/" class="nav__logo"> Caio </a>
+    <div [ngClass]="{ 'show-menu': menu }" class="nav__menu">
+      <ul class="nav__list grid">
+        <li class="nav__item">
+          <a
+            href="#home"
+            (click)="setNavActive('#home')"
+            class="nav__link"
+            [ngClass]="{ 'active-link': navActive === '#home' }"
+          >
+            <fa-icon [icon]="homeIcon" class="nav__icon"></fa-icon>
+            Home
+          </a>
+        </li>
+
+        <li class="nav__item">
+          <a
+            href="#about"
+            class="nav__link"
+            (click)="setNavActive('#about')"
+            [ngClass]="{ 'active-link': navActive === '#about' }"
+          >
+            <fa-icon [icon]="userIcon" class="nav__icon"></fa-icon>
+            About
+          </a>
+        </li>
+
+        <li class="nav__item">
+          <a
+            href="#skills"
+            class="nav__link"
+            (click)="setNavActive('#skills')"
+            [ngClass]="{ 'active-link': navActive === '#skills' }"
+          >
+            <fa-icon [icon]="fileIcon" class="nav__icon"></fa-icon>
+            Skills
+          </a>
+        </li>
+
+        <li class="nav__item">
+          <a
+            href="#qualifications"
+            class="nav__link"
+            (click)="setNavActive('#qualifications')"
+            [ngClass]="{
+              'active-link': navActive === '#qualifications'
+            }"
+          >
+            <fa-icon [icon]="gradcapIcon" class="nav__icon"></fa-icon>
+            Qualifications
+          </a>
+        </li>
+
+        <li class="nav__item">
+          <a
+            href="#portfolio"
+            class="nav__link"
+            (click)="setNavActive('#portfolio')"
+            [ngClass]="{ 'active-link': navActive === '#portfolio' }"
+          >
+            <fa-icon [icon]="wrenchIcon" class="nav__icon"></fa-icon>
+            Portfolio
+          </a>
+        </li>
+
+        <li class="nav__item">
+          <a
+            href="#contact"
+            class="nav__link"
+            (click)="setNavActive('#contact')"
+            [ngClass]="{ 'active-link': navActive === '#contact' }"
+          >
+            <fa-icon [icon]="messageIcon" class="nav__icon"></fa-icon>
+            Contact
+          </a>
+        </li>
+      </ul>
+
+      <fa-icon
+        [icon]="xIcon"
+        class="nav__icon nav__close"
+        (click)="setMenu()"
+      ></fa-icon>
+    </div>
+
+    <div class="nav__toggle" (click)="setMenu()">
+      <fa-icon [icon]="gripIcon"></fa-icon>
+    </div>
+  </nav>
+</header>

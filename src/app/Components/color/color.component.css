@@ -1,0 +1,5 @@
+.color__icon{
+  font-size: 1.3rem;
+  color: var(--title-color);
+  cursor: pointer;
+}

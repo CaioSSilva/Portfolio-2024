@@ -1,0 +1,48 @@
+<section class="qualification section" id="qualifications">
+  <h2 class="section__title">Qualifications</h2>
+  <span class="section__subtitle">My personal Journey</span>
+  <div class="qualification__container container grid">
+    <div class="qualification__content">
+      <div class="qualification__tabs">
+        <div
+          class="qualification__selection qualification__active button--flex"
+          (click)="setTab()"
+        >
+          Certifications
+        </div>
+        <div
+          class="qualification__selection qualification__active button--flex"
+          (click)="setTab()"
+        >
+          Experience
+        </div>
+      </div>
+      <div class="certifications" *ngIf="tab === 'certifications'">
+        <div class="qualification__labels">
+          <h1 class="certification__name">Name</h1>
+          <h1 class="certification__date">Date</h1>
+          <h1 class="certification__type">Type</h1>
+          <div class="qualification__filter">
+            <fa-icon
+              [icon]="filterIcon"
+              class="qualification__button"
+            ></fa-icon>
+          </div>
+        </div>
+        <div class="qualification__content_wrapper">
+          <a
+            class="qualification__item"
+            *ngFor="let item of qualifications"
+            [href]="item.link"
+            target="_blank"
+          >
+            <p class="certification__name">{{ item.name }}</p>
+            <p class="certification__date">{{ item.date }}</p>
+            <p class="certification__type">{{ item.type }}</p>
+          </a>
+        </div>
+      </div>
+      <div class="experience" *ngIf="tab === 'experience'"></div>
+    </div>
+  </div>
+</section>
