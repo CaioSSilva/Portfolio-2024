@@ -13,7 +13,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 export class SkillsComponent {
   check = faCircleCheck
   skills = {
-    frontend_first_row: [
+    frontend: [
       {
         name: 'HTML',
         level: 'Advanced',

@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
-import { CommonModule, DatePipe } from '@angular/common';
+import { CommonModule } from '@angular/common';
 import {
-  faArrowLeft,
-  faArrowRight,
+  faBriefcase,
+  faCalendar,
+  faFilePdf,
   faFilter,
+  faMedal,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { IQualification } from 'src/app/interfaces/IQualification';
@@ -12,27 +14,39 @@ import { IQualification } from 'src/app/interfaces/IQualification';
   selector: 'app-qualifications',
   standalone: true,
   imports: [CommonModule, FontAwesomeModule],
-  providers: [DatePipe],
   templateUrl: './qualifications.component.html',
   styleUrls: ['./qualifications.component.css'],
 })
 export class QualificationsComponent {
   filterIcon = faFilter;
-  leftIcon = faArrowLeft;
-  rightIcon = faArrowRight;
+  calendarIcon = faCalendar;
+  certificationIcon = faFilePdf;
+  experienceTabIcon = faBriefcase;
+  certificationTabIcon = faMedal;
+  filterMenuOpen = false;
+  tab = 0;
+  filters = [
+    {
+      name: 'Other',
+      checked: false,
+    },
+    {
+      name: 'Frontend',
+      checked: false,
+    },
+    {
+      name: 'Backend',
+      checked: false,
+    },
+  ];
 
-  tab = 'certifications';
-
-  constructor(public date: DatePipe) {}
-
-  setTab() {
-    if (this.tab === 'certifications') {
-      this.tab = 'experience';
-    } else {
-      this.tab = 'certifications';
-    }
+  setTab(tab: number) {
+    this.tab = tab;
   }
 
+  openFilterMenu() {
+    this.filterMenuOpen = !this.filterMenuOpen;
+  }
   qualifications: IQualification[] = [
     {
       name: 'Santander Fullstack',

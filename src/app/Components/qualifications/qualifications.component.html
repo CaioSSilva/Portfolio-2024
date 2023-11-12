@@ -2,22 +2,24 @@
   <h2 class="section__title">Qualifications</h2>
   <span class="section__subtitle">My personal Journey</span>
   <div class="qualification__container container grid">
-    <div class="qualification__content">
-      <div class="qualification__tabs">
-        <div
-          class="qualification__selection qualification__active button--flex"
-          (click)="setTab()"
-        >
-          Certifications
-        </div>
-        <div
-          class="qualification__selection qualification__active button--flex"
-          (click)="setTab()"
-        >
-          Experience
-        </div>
+    <div class="qualification__tabs">
+      <div
+        class="qualification__selection qualification__active button--flex"
+        (click)="setTab(0)"
+      >
+        <fa-icon [icon]="certificationTabIcon"></fa-icon>
+        Certifications
       </div>
-      <div class="certifications" *ngIf="tab === 'certifications'">
+      <div
+        class="qualification__selection qualification__active button--flex"
+        (click)="setTab(1)"
+      >
+        <fa-icon [icon]="experienceTabIcon"></fa-icon>
+        Experience
+      </div>
+    </div>
+    <div class="qualification__content">
+      <div class="certifications" *ngIf="tab === 0">
         <div class="qualification__labels">
           <h1 class="certification__name">Name</h1>
           <h1 class="certification__date">Date</h1>
@@ -26,7 +28,14 @@
             <fa-icon
               [icon]="filterIcon"
               class="qualification__button"
+              (click)="openFilterMenu()"
             ></fa-icon>
+            <div class="filter__menu" *ngIf="filterMenuOpen">
+              <label *ngFor="let filter of filters">
+                <input type="checkbox" />
+                <span class="checkmark">{{ filter.name }}</span>
+              </label>
+            </div>
           </div>
         </div>
         <div class="qualification__content_wrapper">
@@ -36,13 +45,30 @@
             [href]="item.link"
             target="_blank"
           >
-            <p class="certification__name">{{ item.name }}</p>
+            <p class="certification__name">
+              <fa-icon [icon]="certificationIcon"></fa-icon>{{ item.name }}
+            </p>
             <p class="certification__date">{{ item.date }}</p>
             <p class="certification__type">{{ item.type }}</p>
           </a>
         </div>
       </div>
-      <div class="experience" *ngIf="tab === 'experience'"></div>
+      <div class="experience" *ngIf="tab === 1">
+        <div class="experience__data">
+          <div>
+            <h3 class="experience__title">Estágiario</h3>
+            <span class="experience__subtitle">IBM - Brasil</span>
+            <div class="experience__calender">
+              <fa-icon [icon]="calendarIcon"></fa-icon>
+              <span>2022 - Presente</span>
+            </div>
+          </div>
+          <div>
+            <span class="experience__rounder"></span
+            ><span class="experience__line"></span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
