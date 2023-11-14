@@ -10,6 +10,7 @@ import { AboutComponent } from './Components/about/about.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SkillsComponent } from './Components/skills/skills.component';
 import { QualificationsComponent } from './Components/qualifications/qualifications.component';
+import { PortfolioComponent } from './Components/portfolio/portfolio.component';
 
 @NgModule({
   declarations: [AppComponent],
@@ -25,6 +26,7 @@ import { QualificationsComponent } from './Components/qualifications/qualificati
     SkillsComponent,
     QualificationsComponent,
     HttpClientModule,
+    PortfolioComponent
   ],
 })
 export class AppModule {}

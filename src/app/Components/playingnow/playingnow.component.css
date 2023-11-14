@@ -17,14 +17,12 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   font-size: var(--h3-font-size);
-  color: var(--text-color);
 }
 .playing__container p {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   font-size: var(--small-font-size);
-  color: var(--text-color);
 }
 .playing__now {
   transition: all;
