@@ -12,6 +12,7 @@ import { SkillsComponent } from './Components/skills/skills.component';
 import { QualificationsComponent } from './Components/qualifications/qualifications.component';
 import { PortfolioComponent } from './Components/portfolio/portfolio.component';
 import { ContactComponent } from './Components/contact/contact.component';
+import { FooterComponent } from './Components/footer/footer.component';
 
 @NgModule({
   declarations: [AppComponent],
@@ -28,7 +29,8 @@ import { ContactComponent } from './Components/contact/contact.component';
     QualificationsComponent,
     HttpClientModule,
     PortfolioComponent,
-    ContactComponent
+    ContactComponent,
+    FooterComponent,
   ],
 })
 export class AppModule {}

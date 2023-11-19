@@ -5,7 +5,7 @@ import {
   faGithub,
   faInstagram,
   faLinkedin,
-  faTwitter,
+  faXTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 import { faArrowDown, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { ColorComponent } from '../color/color.component';
@@ -21,7 +21,7 @@ export class HomeComponent {
   instaIcon = faInstagram;
   githubIcon = faGithub;
   linkedinIcon = faLinkedin;
-  twitterIcon = faTwitter;
+  twitterIcon = faXTwitter;
   paperplaneIcon = faPaperPlane;
   arrowdownIcon = faArrowDown;
 }
