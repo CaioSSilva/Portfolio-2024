@@ -1,0 +1,105 @@
+<section class="contact section" id="contact">
+  <h2 class="section__title">Contact</h2>
+  <span class="section__subtitle">Say hi</span>
+
+  <div class="contact__container container grid">
+    <div class="contact__content">
+      <h3 class="contact__title">Talk to me</h3>
+
+      <div class="contact__info">
+        <div class="contact__card">
+          <i class="fa-brands fa-discord contact__card-icon"></i>
+
+          <h3 class="contact__card-title">Discord</h3>
+          <span class="contact__card-data">Caio Souza#9353</span>
+
+          <a
+            href="https://discordapp.com/users/614463492082106368"
+            target="_blank"
+            rel="noreferrer"
+            class="contact__button email_button"
+          >
+            Discord Profile
+            <i class="fa-solid fa-arrow-right contact__button-icon"></i>
+          </a>
+        </div>
+
+        <div class="contact__card">
+          <i class="fa-brands fa-whatsapp contact__card-icon"></i>
+
+          <h3 class="contact__card-title">Whatsapp</h3>
+          <span class="contact__card-data">(+55) 31 98102-9638</span>
+
+          <a
+            href="https://api.whatsapp.com/send?phone=5531981029638"
+            target="_blank"
+            rel="noreferrer"
+            class="contact__button message_button"
+          >
+            Message me
+            <i class="fa-solid fa-arrow-right contact__button-icon"></i>
+          </a>
+        </div>
+
+        <div class="contact__card">
+          <i class="fa-solid fa-envelope contact__card-icon"></i>
+
+          <h3 class="contact__card-title">Email</h3>
+          <span class="contact__card-data">caiosouzasilva13650@gmail.com</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact__content">
+      <h3 class="contact__title">Write me your Message</h3>
+
+      <form
+        method="POST"
+        action="https://formsubmit.co/324f4411aafb2be4a527bec79dccc22f"
+        class="contact__form"
+      >
+        <input type="hidden" name="_next" value="https://caiossilva.com/" />
+
+        <div class="contact__form-div">
+          <label htmlFor="name" class="contact__form-tag">Name</label>
+          <input
+            id="name"
+            type="text"
+            maxLength="50"
+            name="name"
+            class="contact__form-input"
+            required
+          />
+        </div>
+
+        <div class="contact__form-div">
+          <label htmlFor="email" class="contact__form-tag"> Your Email </label>
+          <input
+            id="email"
+            type="email"
+            maxLength="120"
+            name="email"
+            class="contact__form-input"
+            required
+          />
+        </div>
+
+        <div class="contact__form-div contact__form-area">
+          <label class="contact__form-tag">Message</label>
+          <textarea
+            name="message"
+            cols="30"
+            rows="10"
+            maxLength="{500}"
+            required
+            class="contact__form-input"
+          ></textarea>
+        </div>
+        <button type="submit" class="button button--flex">
+          Send
+          <i class="fa-solid fa-paper-plane send__icon"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+</section>

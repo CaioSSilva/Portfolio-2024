@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SkillsComponent } from './Components/skills/skills.component';
 import { QualificationsComponent } from './Components/qualifications/qualifications.component';
 import { PortfolioComponent } from './Components/portfolio/portfolio.component';
+import { ContactComponent } from './Components/contact/contact.component';
 
 @NgModule({
   declarations: [AppComponent],
@@ -26,7 +27,8 @@ import { PortfolioComponent } from './Components/portfolio/portfolio.component';
     SkillsComponent,
     QualificationsComponent,
     HttpClientModule,
-    PortfolioComponent
+    PortfolioComponent,
+    ContactComponent
   ],
 })
 export class AppModule {}
