@@ -8,7 +8,7 @@
 
       <div class="contact__info">
         <div class="contact__card">
-          <i class="fa-brands fa-discord contact__card-icon"></i>
+          <fa-icon [icon]="discordIcon" class="contact__card-icon"></fa-icon>
 
           <h3 class="contact__card-title">Discord</h3>
           <span class="contact__card-data">Caio Souza#9353</span>
@@ -20,12 +20,13 @@
             class="contact__button email_button"
           >
             Discord Profile
-            <i class="fa-solid fa-arrow-right contact__button-icon"></i>
+
+            <fa-icon [icon]="rightIcon" class="contact__button-icon"></fa-icon>
           </a>
         </div>
 
         <div class="contact__card">
-          <i class="fa-brands fa-whatsapp contact__card-icon"></i>
+          <fa-icon [icon]="whatsIcon" class="contact__card-icon"></fa-icon>
 
           <h3 class="contact__card-title">Whatsapp</h3>
           <span class="contact__card-data">(+55) 31 98102-9638</span>
@@ -37,12 +38,12 @@
             class="contact__button message_button"
           >
             Message me
-            <i class="fa-solid fa-arrow-right contact__button-icon"></i>
+            <fa-icon [icon]="rightIcon" class="contact__button-icon"></fa-icon>
           </a>
         </div>
 
         <div class="contact__card">
-          <i class="fa-solid fa-envelope contact__card-icon"></i>
+          <fa-icon [icon]="envelopeIcon" class="contact__card-icon"></fa-icon>
 
           <h3 class="contact__card-title">Email</h3>
           <span class="contact__card-data">caiosouzasilva13650@gmail.com</span>
@@ -97,7 +98,8 @@
         </div>
         <button type="submit" class="button button--flex">
           Send
-          <i class="fa-solid fa-paper-plane send__icon"></i>
+
+          <fa-icon [icon]="paperplaneIcon" class="send__icon"></fa-icon>
         </button>
       </form>
     </div>
