@@ -44,9 +44,7 @@ export class QualificationsComponent {
   setTab(tab: number) {
     this.tab = tab;
   }
-  /*
   openFilterMenu() {
-    this.filterMenuOpen = !this.filterMenuOpen;
+    //this.filterMenuOpen = !this.filterMenuOpen;
   }
-  */
 }
