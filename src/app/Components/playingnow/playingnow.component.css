@@ -1,7 +1,7 @@
 .playing__container {
   display: flex;
   width: 400px;
-  margin: 1rem;
+  margin-top: 1rem;
   padding: 0.7rem;
   border-radius: 0.75rem;
   border: 1px solid var(--border-color);
