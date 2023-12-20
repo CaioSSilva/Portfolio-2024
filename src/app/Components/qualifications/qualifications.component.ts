@@ -65,25 +65,11 @@ export class QualificationsComponent {
 
   filterClick(name: IQualification['type']) {
     this.qualifications = this.aux;
-    this.DateDowning()
     this.handleFilterSelection(name);
     if (this.filtered) {
       this.qualifications = this.qualifications.filter(
         (certification) => certification.type == name
       );
     }
-  }
-
-  DateDowning() {
-    this.qualifications.sort(function (a, b) {
-      if (a.date < b.date) {
-        return 1;
-      }
-      if (a.date > b.date) {
-        return -1;
-      }
-      return 0;
-    });
-    console.log(this.qualifications)
   }
 }
