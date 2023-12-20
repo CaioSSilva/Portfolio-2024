@@ -142,7 +142,6 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  width: 150px;
   padding: 10px;
   border-radius: 5px;
   background-color: var(--container-color);
