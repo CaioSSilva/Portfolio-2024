@@ -9,7 +9,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import qualifications from './qualifications';
-
+import { IQualification } from 'src/app/interfaces/IQualification';
 @Component({
   selector: 'app-qualifications',
   standalone: true,
@@ -25,18 +25,20 @@ export class QualificationsComponent {
   certificationTabIcon = faMedal;
   filterMenuOpen = false;
   qualifications = qualifications;
+  aux = qualifications;
+  filtered: boolean = false;
   tab = 0;
   filters = [
     {
-      name: 'Other',
+      name: <IQualification['type']>'Frontend',
       checked: false,
     },
     {
-      name: 'Frontend',
+      name: <IQualification['type']>'Backend',
       checked: false,
     },
     {
-      name: 'Backend',
+      name: <IQualification['type']>'Other',
       checked: false,
     },
   ];
@@ -45,6 +47,29 @@ export class QualificationsComponent {
     this.tab = tab;
   }
   openFilterMenu() {
-    //this.filterMenuOpen = !this.filterMenuOpen;
+    this.filterMenuOpen = !this.filterMenuOpen;
+  }
+
+  handleFilterSelection(name: IQualification['type']) {
+    this.filters.map((filter) => {
+      if (filter.name != name) filter.checked = false;
+      else if (filter.name == name && filter.checked) {
+        filter.checked = false;
+        this.filtered = false;
+      } else {
+        filter.checked = true;
+        this.filtered = true;
+      }
+    });
+  }
+
+  filterClick(name: IQualification['type']) {
+    this.qualifications = this.aux;
+    this.handleFilterSelection(name);
+    if (this.filtered) {
+      this.qualifications = this.qualifications.filter(
+        (certification) => certification.type == name
+      );
+    }
   }
 }
