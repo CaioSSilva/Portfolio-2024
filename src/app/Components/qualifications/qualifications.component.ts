@@ -42,9 +42,6 @@ export class QualificationsComponent {
       checked: false,
     },
   ];
-  constructor() {
-    this.DateDowning();
-  }
 
   setTab(tab: number) {
     this.tab = tab;
@@ -68,6 +65,7 @@ export class QualificationsComponent {
 
   filterClick(name: IQualification['type']) {
     this.qualifications = this.aux;
+    this.DateDowning()
     this.handleFilterSelection(name);
     if (this.filtered) {
       this.qualifications = this.qualifications.filter(
@@ -86,5 +84,6 @@ export class QualificationsComponent {
       }
       return 0;
     });
+    console.log(this.qualifications)
   }
 }
