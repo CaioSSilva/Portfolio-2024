@@ -31,13 +31,17 @@
               (click)="openFilterMenu()"
             ></fa-icon>
             <div class="filter__menu" *ngIf="filterMenuOpen">
-              <label *ngFor="let filter of filters; let i = index">
+              <label
+                *ngFor="let filter of filters; let i = index"
+                class="filter__container"
+              >
+                {{ filter.name }}
                 <input
-                  type="checkbox"
+                  type="radio"
                   [checked]="filters[i].checked"
                   (click)="filterClick(filters[i].name)"
                 />
-                <span class="checkmark">{{ filter.name }}</span>
+                <span class="checkmark"></span>
               </label>
             </div>
           </div>

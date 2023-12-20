@@ -140,23 +140,73 @@
 }
 .filter__menu {
   position: absolute;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
+  padding: 5px;
   border-radius: 5px;
   background-color: var(--container-color);
   border: 1px solid var(--border-color);
   border-radius: 1rem;
-  margin-top: 40px;
+  margin-top: 37px;
 }
-.filter__menu > label {
-  display: flex;
-  justify-content: start;
-  gap: 10px;
-  color: var(--title-color);
+.filter__container {
+  display: block;
   position: relative;
+  padding-left: 25px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.filter__container input {
+  position: absolute;
+  opacity: 0;
   cursor: pointer;
 }
+
+.checkmark {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.filter__container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.filter__container input:checked ~ .checkmark {
+  background-color: #2b2b2b;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.filter__container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.filter__container .checkmark:after {
+  left: 5px;
+  top: 6px;
+  width: 6px;
+  height: 5px;
+  border-radius: 50%;
+  background: white;
+}
+
 @media screen and (max-width: 992px) {
   .qualification__container {
     grid-template-columns: repeat(1, 350px);
@@ -178,5 +228,8 @@
   }
   .experience__data {
     grid-template-columns: max-content 1fr;
+  }
+  .filter__menu{
+    margin-right: 20px;
   }
 }
