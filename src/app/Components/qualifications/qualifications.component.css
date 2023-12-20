@@ -152,7 +152,7 @@
 .filter__menu > label {
   display: flex;
   justify-content: start;
-  gap: 20px;
+  gap: 10px;
   color: var(--title-color);
   position: relative;
   cursor: pointer;
