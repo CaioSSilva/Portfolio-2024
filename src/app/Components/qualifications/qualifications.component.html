@@ -32,7 +32,11 @@
             ></fa-icon>
             <div class="filter__menu" *ngIf="filterMenuOpen">
               <label *ngFor="let filter of filters; let i = index">
-                <input type="checkbox"  [checked]="filters[i].checked" (click)="filterClick(filters[i].name)"/>
+                <input
+                  type="checkbox"
+                  [checked]="filters[i].checked"
+                  (click)="filterClick(filters[i].name)"
+                />
                 <span class="checkmark">{{ filter.name }}</span>
               </label>
             </div>

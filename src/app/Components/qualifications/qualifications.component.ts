@@ -42,6 +42,9 @@ export class QualificationsComponent {
       checked: false,
     },
   ];
+  constructor() {
+    this.DateDowning();
+  }
 
   setTab(tab: number) {
     this.tab = tab;
@@ -71,5 +74,17 @@ export class QualificationsComponent {
         (certification) => certification.type == name
       );
     }
+  }
+
+  DateDowning() {
+    this.qualifications.sort(function (a, b) {
+      if (a.date < b.date) {
+        return 1;
+      }
+      if (a.date > b.date) {
+        return -1;
+      }
+      return 0;
+    });
   }
 }
