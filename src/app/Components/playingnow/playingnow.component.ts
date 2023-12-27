@@ -41,6 +41,12 @@ export class PlayingnowComponent {
   }
   getMusic() {
     this.playingapi.GetMusic().subscribe((music) => {
+      var musicImg = music.recenttracks.track[0].image[2]['#text'];
+
+      if (musicImg.includes('2a96cbd8b46e442fc41c2b86b821562f.png')) {
+        music.recenttracks.track[0].image[2]['#text'] =
+          '../../../assets/tidal.jpeg';
+      }
       this.music = music;
     });
     setTimeout(() => {
