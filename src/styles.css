@@ -180,7 +180,7 @@ img {
   animation-range: entry 50% cover 50%;
 }
 #portfolio {
-  animation-range: entry 0% cover 30%;
+  animation-range: entry 0% cover 10%;
 }
 /*=============== BUTTONS ===============*/
 .button {
