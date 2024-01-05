@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
@@ -28,14 +28,28 @@ export class HeaderComponent {
   messageIcon = faMessage;
   xIcon = faX;
   gripIcon = faGrip;
-
   menu = false;
   navActive = '#home';
+
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll() {
+    this.progress();
+  }
 
   setNavActive(name: string) {
     this.navActive = name;
   }
   setMenu() {
     this.menu = !this.menu;
+  }
+  progress() {
+    var progressBar = <HTMLElement>document.getElementById('progress');
+    var winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+    var height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    progressBar.style.width = scrolled + '%';
   }
 }
