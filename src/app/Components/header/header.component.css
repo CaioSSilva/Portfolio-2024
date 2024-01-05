@@ -52,7 +52,7 @@
 #progress{
   height: 1px;
   background: var(--title-color);
-  width: 100%;
+  width: 0%;
 }
 /*=============== BREAKPOINTS ===============*/
 /*For big devices */
