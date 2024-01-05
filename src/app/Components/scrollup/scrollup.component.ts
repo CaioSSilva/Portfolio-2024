@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
@@ -10,17 +10,16 @@ import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
   templateUrl: './scrollup.component.html',
   styleUrls: ['./scrollup.component.css'],
 })
-export class ScrollupComponent implements OnInit {
+export class ScrollupComponent {
   arrowupIcon = faArrowUp;
 
-  ngOnInit() {
-    window.addEventListener('scroll', () => {
-      const scrollUp = document.querySelector('.scrollup');
-      if (window.scrollY >= 560) {
-        scrollUp?.classList.add('show__scroll');
-      } else {
-        scrollUp?.classList.remove('show__scroll');
-      }
-    });
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll() {
+    const scrollUp = document.querySelector('.scrollup');
+    if (window.scrollY >= 560) {
+      scrollUp?.classList.add('show__scroll');
+    } else {
+      scrollUp?.classList.remove('show__scroll');
+    }
   }
 }

@@ -50,7 +50,6 @@
   background-color: var(--container-color);
 }
 #progress{
-  height: 1px;
   background: var(--title-color);
   width: 0%;
 }

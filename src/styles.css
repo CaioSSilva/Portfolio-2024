@@ -46,6 +46,11 @@
   --z-tooltip: 10;
   --z-fixed: 100;
   --z-modal: 1000;
+  /*--------- Hide Scroll -------*/
+  scrollbar-width: none;
+}
+:root::-webkit-scrollbar {
+  display: none;
 }
 .dark__mode {
   --title-color: #c5c5c5;
@@ -90,10 +95,6 @@ textarea {
 body {
   background-color: var(--body-color);
   color: var(--text-color);
-}
-
-::-webkit-scrollbar {
-  display: none;
 }
 
 h1,
@@ -179,7 +180,7 @@ img {
   animation-range: entry 50% cover 50%;
 }
 #portfolio {
-  animation-range: entry -10% cover 30%;
+  animation-range: entry 0% cover 30%;
 }
 /*=============== BUTTONS ===============*/
 .button {

@@ -50,6 +50,12 @@ export class HeaderComponent {
       document.documentElement.scrollHeight -
       document.documentElement.clientHeight;
     var scrolled = (winScroll / height) * 100;
-    progressBar.style.width = scrolled + '%';
+    progressBar.style.height = '2px';
+
+    if (scrolled > 2) {
+      progressBar.style.width = scrolled + '%';
+    } else {
+      progressBar.style.height = '0px';
+    }
   }
 }
