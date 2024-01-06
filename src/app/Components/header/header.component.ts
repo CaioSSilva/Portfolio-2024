@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
@@ -11,7 +11,7 @@ import {
   faX,
   faGrip,
 } from '@fortawesome/free-solid-svg-icons';
-
+import { gsap } from 'gsap';
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -19,7 +19,7 @@ import {
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
 })
-export class HeaderComponent {
+export class HeaderComponent implements AfterViewInit{
   homeIcon = faHome;
   userIcon = faUser;
   fileIcon = faFileAlt;
@@ -57,5 +57,12 @@ export class HeaderComponent {
     } else {
       progressBar.style.height = '0px';
     }
+  }
+
+  @ViewChild('header', {static:true})
+  header!:ElementRef<HTMLDivElement>
+
+  ngAfterViewInit(): void {
+    gsap.from(this.header.nativeElement,{opacity:0, ease:'back',duration:1})
   }
 }
