@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { HeaderComponent } from './Components/header/header.component';
-import { HomeComponent } from './Components/home/home.component';
-import { ScrollupComponent } from './Components/scrollup/scrollup.component';
-import { AboutComponent } from './Components/about/about.component';
+import { HeaderComponent } from './components/header/header.component';
+import { HomeComponent } from './components/home/home.component';
+import { ScrollupComponent } from './components/scrollup/scrollup.component';
+import { AboutComponent } from './components/about/about.component';
 import { HttpClientModule } from '@angular/common/http';
-import { SkillsComponent } from './Components/skills/skills.component';
-import { QualificationsComponent } from './Components/qualifications/qualifications.component';
-import { PortfolioComponent } from './Components/portfolio/portfolio.component';
-import { ContactComponent } from './Components/contact/contact.component';
-import { FooterComponent } from './Components/footer/footer.component';
+import { SkillsComponent } from './components/skills/skills.component';
+import { QualificationsComponent } from './components/qualifications/qualifications.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { LanguageComponent } from './components/language/language.component';
 
 @NgModule({
   declarations: [AppComponent],
@@ -31,6 +31,7 @@ import { FooterComponent } from './Components/footer/footer.component';
     PortfolioComponent,
     ContactComponent,
     FooterComponent,
+    LanguageComponent,
   ],
 })
 export class AppModule {}

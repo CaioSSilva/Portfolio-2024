@@ -1,0 +1,12 @@
+<div class="language" (click)="menuOpen = !menuOpen">
+  <fa-icon [icon]="faGlobe" class="language__icon"></fa-icon>
+</div>
+
+<div class="menu" [ngStyle]="{ display: menuOpen ? 'flex' : 'none' }">
+  <div>
+    <div class="lang" *ngFor="let item of languages">
+      <img [src]="item.flag" class="flag" />
+      <p>{{ item.name }}</p>
+    </div>
+  </div>
+</div>
