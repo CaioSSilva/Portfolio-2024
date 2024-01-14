@@ -10,7 +10,6 @@ import {
 import { faArrowDown, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { ColorComponent } from '../color/color.component';
 import { gsap } from 'gsap';
-import { from } from 'rxjs';
 
 @Component({
   selector: 'app-home',
