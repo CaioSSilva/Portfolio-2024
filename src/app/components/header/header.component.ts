@@ -12,10 +12,11 @@ import {
   faGrip,
 } from '@fortawesome/free-solid-svg-icons';
 import { gsap } from 'gsap';
+import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, FontAwesomeModule],
+  imports: [CommonModule, FontAwesomeModule, TranslateModule],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
 })

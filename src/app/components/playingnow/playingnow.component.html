@@ -1,7 +1,7 @@
 <a href="https://www.last.fm/pt/user/CaioSSilva" target="_blank" *ngIf="music.recenttracks.track[0].name != ''" class="playing__container">
   <img [src]="music.recenttracks.track[0].image[2]['#text']" alt="cover" />
   <div>
-    <p class="playing__now">Playing Now on TIDAL</p>
+    <p class="playing__now">{{'Playing Now on TIDAL'| translate }}</p>
     <h1>{{ music.recenttracks.track[0].name }}</h1>
     <p>{{ music.recenttracks.track[0].artist["#text"] }}</p>
   </div>

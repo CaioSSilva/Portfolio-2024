@@ -2,16 +2,17 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [CommonModule, FontAwesomeModule],
+  imports: [CommonModule, FontAwesomeModule, TranslateModule],
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.css'],
 })
 export class SkillsComponent {
-  check = faCircleCheck
+  check = faCircleCheck;
   skills = {
     frontend: [
       {
@@ -46,6 +47,6 @@ export class SkillsComponent {
         name: 'Figma',
         level: 'Intermediate',
       },
-    ]
+    ],
   };
 }

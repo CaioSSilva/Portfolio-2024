@@ -1,20 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-language',
   standalone: true,
-  imports: [CommonModule, FontAwesomeModule],
+  imports: [CommonModule, FontAwesomeModule, TranslateModule],
   templateUrl: './language.component.html',
   styleUrls: ['./language.component.css'],
 })
 export class LanguageComponent {
+  @Output() langChangeEvent = new EventEmitter<string>();
+
   faGlobe = faGlobe;
   menuOpen = false;
   languages = [
-    { name: 'English', flag: '../../../assets/en-icon.png' },
-    { name: 'Portuguese', flag: '../../../assets/br-icon.png' },
+    { name: 'English', value: 'en', flag: '../../../assets/en-icon.png' },
+    { name: 'Portuguese', value: 'pt', flag: '../../../assets/br-icon.png' },
   ];
+
+  changeLang(lang: string) {
+    this.langChangeEvent.emit(lang);
+  }
 }

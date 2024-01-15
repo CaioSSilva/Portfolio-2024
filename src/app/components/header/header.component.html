@@ -14,7 +14,7 @@
             [ngClass]="{ 'active-link': navActive === '#home' }"
           >
             <fa-icon [icon]="homeIcon" class="nav__icon"></fa-icon>
-            Home
+            {{'Home' | translate}}
           </a>
         </li>
 
@@ -26,7 +26,7 @@
             [ngClass]="{ 'active-link': navActive === '#about' }"
           >
             <fa-icon [icon]="userIcon" class="nav__icon"></fa-icon>
-            About
+            {{'About' | translate}}
           </a>
         </li>
 
@@ -38,7 +38,7 @@
             [ngClass]="{ 'active-link': navActive === '#skills' }"
           >
             <fa-icon [icon]="fileIcon" class="nav__icon"></fa-icon>
-            Skills
+            {{'Skills' | translate}}
           </a>
         </li>
 
@@ -52,7 +52,7 @@
             }"
           >
             <fa-icon [icon]="gradcapIcon" class="nav__icon"></fa-icon>
-            Qualifications
+            {{'Qualifications' | translate}}
           </a>
         </li>
 
@@ -64,7 +64,7 @@
             [ngClass]="{ 'active-link': navActive === '#portfolio' }"
           >
             <fa-icon [icon]="wrenchIcon" class="nav__icon"></fa-icon>
-            Portfolio
+            {{'Portfolio' | translate}}
           </a>
         </li>
 
@@ -76,7 +76,7 @@
             [ngClass]="{ 'active-link': navActive === '#contact' }"
           >
             <fa-icon [icon]="messageIcon" class="nav__icon"></fa-icon>
-            Contact
+            {{'Contact' | translate}}
           </a>
         </li>
       </ul>

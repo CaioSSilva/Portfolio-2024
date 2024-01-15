@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PlayingnowService } from 'src/app/services/playingnow.service';
 import { IMusic } from 'src/app/interfaces/IMusic';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-playingnow',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './playingnow.component.html',
   styleUrls: ['./playingnow.component.css'],
 })

@@ -1,6 +1,6 @@
 <section class="qualification section" id="qualifications">
-  <h2 class="section__title">Qualifications</h2>
-  <span class="section__subtitle">My personal Journey</span>
+  <h2 class="section__title">{{ "Qualifications" | translate }}</h2>
+  <span class="section__subtitle">{{ "My personal Journey" | translate }}</span>
   <div class="qualification__container container grid">
     <div class="qualification__tabs">
       <div
@@ -8,22 +8,22 @@
         (click)="setTab(0)"
       >
         <fa-icon [icon]="certificationTabIcon"></fa-icon>
-        Certifications
+        {{ "Certifications" | translate }}
       </div>
       <div
         class="qualification__selection qualification__active button--flex"
         (click)="setTab(1)"
       >
         <fa-icon [icon]="experienceTabIcon"></fa-icon>
-        Experience
+        {{ "Experience" | translate }}
       </div>
     </div>
     <div class="qualification__content">
       <div class="certifications" *ngIf="tab === 0">
         <div class="qualification__labels">
-          <h1 class="certification__name">Name</h1>
-          <h1 class="certification__date">Date</h1>
-          <h1 class="certification__type">Type</h1>
+          <h1 class="certification__name">{{ "Name" | translate }}</h1>
+          <h1 class="certification__date">{{ "Date" | translate }}</h1>
+          <h1 class="certification__type">{{ "Type" | translate }}</h1>
           <div class="qualification__filter">
             <fa-icon
               [icon]="filterIcon"
@@ -35,7 +35,7 @@
                 *ngFor="let filter of filters; let i = index"
                 class="filter__container"
               >
-                {{ filter.name }}
+                {{ filter.name | translate }}
                 <input
                   type="radio"
                   [checked]="filters[i].checked"
@@ -57,18 +57,20 @@
               <fa-icon [icon]="certificationIcon"></fa-icon>{{ item.name }}
             </p>
             <p class="certification__date">{{ item.date }}</p>
-            <p class="certification__type">{{ item.type }}</p>
+            <p class="certification__type">{{ item.type | translate }}</p>
           </a>
         </div>
       </div>
       <div class="experience" *ngIf="tab === 1">
         <div class="experience__data">
           <div>
-            <h3 class="experience__title">Intern</h3>
-            <span class="experience__subtitle">IBM - Brazil</span>
+            <h3 class="experience__title">{{ "Intern" | translate }}</h3>
+            <span class="experience__subtitle">{{
+              "IBM - Brazil" | translate
+            }}</span>
             <div class="experience__calender">
               <fa-icon [icon]="calendarIcon"></fa-icon>
-              <span>2022 - Present</span>
+              <span>{{ "2022 - Present" | translate }}</span>
             </div>
           </div>
           <div>
