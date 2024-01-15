@@ -59,11 +59,4 @@ export class HeaderComponent implements AfterViewInit{
       progressBar.style.height = '0px';
     }
   }
-
-  @ViewChild('header', {static:true})
-  header!:ElementRef<HTMLDivElement>
-
-  ngAfterViewInit(): void {
-    gsap.from(this.header.nativeElement,{opacity:0, ease:'back',duration:1})
-  }
 }
