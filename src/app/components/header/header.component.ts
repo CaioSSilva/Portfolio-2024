@@ -20,7 +20,7 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
 })
-export class HeaderComponent implements AfterViewInit{
+export class HeaderComponent{
   homeIcon = faHome;
   userIcon = faUser;
   fileIcon = faFileAlt;
