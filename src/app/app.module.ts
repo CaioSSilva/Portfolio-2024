@@ -13,6 +13,9 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LanguageComponent } from './components/language/language.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -28,6 +31,13 @@ import { LanguageComponent } from './components/language/language.component';
     SkillsComponent,
     QualificationsComponent,
     HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
     PortfolioComponent,
     ContactComponent,
     FooterComponent,
@@ -35,3 +45,7 @@ import { LanguageComponent } from './components/language/language.component';
   ],
 })
 export class AppModule {}
+
+export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
+  return new TranslateHttpLoader(http);
+}

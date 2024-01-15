@@ -3,7 +3,7 @@
   height: 35px;
   position: fixed;
   display: flex;
-  justify-content: center;
+  flex: start;
   align-items: center;
   left: 1.5rem;
   bottom: 3rem;
@@ -38,7 +38,7 @@
 .lang {
   display: flex;
   align-items: center;
-  justify-content: start;
+  flex: start;
   height: 30px;
   padding: 5px;
   font-size: 15px;
