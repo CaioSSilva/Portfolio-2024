@@ -10,7 +10,7 @@
   background-color: var(--title-color);
   padding: 0.5rem;
   border-radius: 0.4rem;
-  z-index: 100;
+  z-index: 2;
   cursor: pointer;
   transition: 0.4s;
 }
@@ -34,7 +34,7 @@
   border-radius: 6px;
   text-align: center;
   border: 1px solid var(--border-color);
-  z-index: 100;
+  z-index: 2;
 }
 .lang {
   display: flex;

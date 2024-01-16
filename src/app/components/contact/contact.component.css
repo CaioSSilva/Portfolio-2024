@@ -83,7 +83,7 @@
   font-size: var(--smaller-font-size);
   padding: 0.25rem;
   background-color: var(--body-color);
-  z-index: 10;
+  z-index: 2;
 }
 .contact__form-area {
   height: 11rem;
