@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { Component, HostListener} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
@@ -11,7 +11,6 @@ import {
   faX,
   faGrip,
 } from '@fortawesome/free-solid-svg-icons';
-import { gsap } from 'gsap';
 import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-header',
