@@ -11,6 +11,8 @@
   border-radius: 1rem;
 }
 .work__image {
+  height: 175px;
+  width: 310px;
   border-radius: 0.6rem;
   margin-bottom: var(--mb-1);
 }
