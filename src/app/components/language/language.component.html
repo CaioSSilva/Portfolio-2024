@@ -4,8 +4,12 @@
 
 <div class="menu" [ngStyle]="{ display: menuOpen ? 'flex' : 'none' }">
   <div>
-    <div (click)="changeLang(item.value)" class="lang" *ngFor="let item of languages">
-      <img [src]="item.flag" class="flag" />
+    <div
+      (click)="changeLang(item.value)"
+      class="lang"
+      *ngFor="let item of languages"
+    >
+      <img alt="lang-flag" title="lang-flag" [src]="item.flag" class="flag" />
       <p>{{ item.name | translate }}</p>
     </div>
   </div>
