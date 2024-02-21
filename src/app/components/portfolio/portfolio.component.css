@@ -11,8 +11,8 @@
   border-radius: 1rem;
 }
 .work__image {
-  height: 175px;
-  width: 310px;
+  height: 180px;
+  width: 320px;
   border-radius: 0.6rem;
   margin-bottom: var(--mb-1);
 }
@@ -69,10 +69,5 @@
 @media screen and (max-width: 768px) {
   .work__container {
     grid-template-columns: max-content;
-  }
-}
-@media screen and (max-width: 576px) {
-  .work__image {
-    width: 100%;
   }
 }

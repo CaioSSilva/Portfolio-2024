@@ -6,10 +6,10 @@
   --header-height: 3rem;
 
   /*========== Colors ==========*/
-  --title-color: #333333;
+  --title-color: #292929;
   --title-color-dark: #000000;
   --text-color: #757575;
-  --body-color: #fafafa;
+  --body-color: #f1f1f1;
   --container-color: #fff;
   --border-color: #00000026;
 
@@ -132,12 +132,13 @@ img {
 }
 
 @keyframes opacity {
-  from{
+  from {
     opacity: 0;
-  }to{
+  }
+  to {
     opacity: 1;
   }
-  0%{
+  0% {
     opacity: 0;
   }
 }
