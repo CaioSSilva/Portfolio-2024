@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Allow: caiossilva.com/#home
+Allow: caiossilva.com/#about
+Allow: caiossilva.com/#skills
+Allow: caiossilva.com/#qualifications
+Allow: caiossilva.com/#portfolio
+Allow: caiossilva.com/#contact
+
+Sitemap: https://caiossilva.com/sitemap.xml
