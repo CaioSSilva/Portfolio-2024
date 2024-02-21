@@ -46,7 +46,7 @@ export class PlayingnowComponent {
 
       if (musicImg.includes('2a96cbd8b46e442fc41c2b86b821562f.png')) {
         music.recenttracks.track[0].image[2]['#text'] =
-          '../../../assets/tidal.jpg';
+          '../../../assets/tidal.webp';
       }
       this.music = music;
     });
