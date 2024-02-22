@@ -13,7 +13,7 @@
   filter: grayscale(1);
   border-radius: 8px;
 }
-.playing__container h1 {
+.playing__container h2 {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;

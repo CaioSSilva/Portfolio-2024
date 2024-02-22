@@ -40,7 +40,7 @@
   display: flex;
   align-items: center;
 }
-.qualification__labels h1 {
+.qualification__labels h2 {
   font-size: 16px;
 }
 .certification__name {
