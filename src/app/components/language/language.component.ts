@@ -17,8 +17,8 @@ export class LanguageComponent {
   faGlobe = faGlobe;
   menuOpen = false;
   languages = [
-    { name: 'English', value: 'en', flag: '../../../assets/en-icon.png' },
-    { name: 'Portuguese', value: 'pt', flag: '../../../assets/br-icon.png' },
+    { name: 'English', value: 'en', flag: '../../../assets/en-icon.webp' },
+    { name: 'Portuguese', value: 'pt', flag: '../../../assets/br-icon.webp' },
   ];
 
   changeLang(lang: string) {
