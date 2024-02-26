@@ -1,7 +1,7 @@
 <section class="home section" id="home">
   <div class="home__container container grid">
     <div class="home__content grid">
-      <div class="home__social" #homeSocial>
+      <div class="home__social">
         <a
           href="https://www.instagram.com/caios_silvaa/"
           target="_blank"
@@ -39,10 +39,11 @@
           <fa-icon [icon]="linkedinIcon"></fa-icon>
         </a>
       </div>
-      <div class="home__img" #homeImg>
+      <div class="home__img">
         <app-color></app-color>
+        <img src="../../../assets/profile.webp" alt="" />
       </div>
-      <div class="home__data" #toBottomUp>
+      <div class="home__data">
         <h1 class="home__title">Caio Souza</h1>
 
         <h2 class="home__subtitle">{{ "Web Developer" | translate }}</h2>
@@ -63,7 +64,7 @@
       </div>
     </div>
 
-    <div class="home__scroll" #toBottomUp>
+    <div class="home__scroll">
       <a href="#about" class="home__scroll-button button--flex">
         <div class="mouse">
           <div class="scroll"></div>

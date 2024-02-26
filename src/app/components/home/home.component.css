@@ -58,14 +58,12 @@
   margin-bottom: var(--mb-3);
 }
 .home__img {
-  background: url(../../../assets/profile.webp);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  box-shadow: inset 0 0 0 6px #ffffff5e;
+  display: flex;
   order: 1;
+}
+.home__img img {
+  border: solid 6px #8585855e;
   border-radius: 60% 40% 30% 70%/ 60% 30% 70% 40%;
-  justify-self: center;
   filter: grayscale(1);
   width: 300px;
   height: 300px;
@@ -138,7 +136,7 @@
     max-width: initial;
     margin-bottom: var(--mb-1);
   }
-  .home__img {
+  .home__img img {
     width: 250px;
     height: 250px;
   }
@@ -155,6 +153,8 @@
   .home__img {
     order: initial;
     justify-self: initial;
+  }
+  .home__img img {
     width: 200px;
     height: 200px;
   }
