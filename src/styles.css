@@ -251,7 +251,7 @@ img {
   --title-color: #c3e1ff;
   --title-color-dark: #b0cce7;
   --text-color: #ffffff;
-  --body-color: #2b567f;
+  --body-color: #254a6d;
   --container-color: #486b8f;
   --border-color: #567594;
 }
@@ -263,4 +263,9 @@ img {
   --body-color: #f1f1f1;
   --container-color: #fff;
   --border-color: #00000026;
+}
+
+.white__mode img,
+.dark__mode img {
+  filter: grayscale(1);
 }

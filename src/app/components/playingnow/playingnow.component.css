@@ -10,7 +10,6 @@
 .playing__container img {
   height: 80px;
   width: 80px;
-  filter: grayscale(1);
   border-radius: 8px;
 }
 .playing__container h2 {

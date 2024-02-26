@@ -64,7 +64,6 @@
 .home__img img {
   border: solid 6px #9191915e;
   border-radius: 60% 40% 30% 70%/ 60% 30% 70% 40%;
-  filter: grayscale(1);
   width: 300px;
   height: 300px;
   animation: profile__photo 8s ease-in-out infinite 1s;
