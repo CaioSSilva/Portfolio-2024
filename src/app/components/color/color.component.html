@@ -1,3 +1,10 @@
 <div class="color__container">
-  <fa-icon [icon]="icon" class="color__icon" (click)="changeTheme()"></fa-icon>
+  <div class="toggler" (click)="openMenu()">
+    <fa-icon [icon]="icon" class="color__icon"></fa-icon>
+  </div>
+  <div class="selectors" [ngStyle]="{ opacity: menuOpened ? '1' : '0' }">
+    <div class="selector white" (click)="setTheme('white__mode')"></div>
+    <div class="selector dark" (click)="setTheme('dark__mode')"></div>
+    <div class="selector blue" (click)="setTheme('blue__mode')"></div>
+  </div>
 </div>

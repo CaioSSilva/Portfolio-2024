@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
+import { faPaintBrush } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-color',
@@ -11,33 +11,36 @@ import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./color.component.css'],
 })
 export class ColorComponent {
-  icon = faMoon;
-
+  menuOpened: boolean = false;
+  icon = faPaintBrush;
   root = <DOMTokenList>document.querySelector(':root')?.classList;
+  white = document.querySelector('white');
+  dark = document.querySelector('dark');
+  blue = document.querySelector('blue');
+
   favicon = <HTMLLinkElement>(
     document.querySelector("link[rel='shortcut icon']")
   );
 
   constructor() {
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      this.root.add('dark__mode');
-      this.icon = faSun;
-      this.setFavicon('../../../assets/dark.ico');
+    if (localStorage.getItem('theme')) {
+      this.setTheme(<string>localStorage.getItem('theme'));
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      this.setTheme('dark__mode');
+    } else {
+      this.setTheme('white__mode');
     }
+  }
+  setTheme(theme: string) {
+    localStorage.setItem('theme', theme);
+    document.querySelector(':root')?.removeAttribute('class');
+    this.root.add(<string>localStorage.getItem('theme'));
+    this.setFavicon(`'../../../assets/${theme}.ico`);
+  }
+  openMenu() {
+    this.menuOpened = !this.menuOpened;
   }
 
-  changeTheme() {
-    const icon = document.querySelector('.color__icon')?.classList;
-    if (this.root.contains('dark__mode')) {
-      this.root.remove('dark__mode');
-      this.icon = faMoon;
-      this.setFavicon('../../../assets/white.ico');
-    } else {
-      this.root.add('dark__mode');
-      this.icon = faSun;
-      this.setFavicon('../../../assets/dark.ico');
-    }
-  }
   setFavicon(favImg: string) {
     let link = <HTMLLinkElement>(
       document.querySelector('head')?.querySelector('link')

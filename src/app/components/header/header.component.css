@@ -32,7 +32,6 @@
   font-size: var(--small-font-size);
   color: var(--title-color);
   font-weight: var(--font-medium);
-  transition: 0.3s;
 }
 .nav__link:hover,
 .active-link {
@@ -46,10 +45,10 @@
 .header__scroll {
   box-shadow: 0 1px 4px var(--border-color);
 }
-.progress-container{
+.progress-container {
   background-color: var(--body-color);
 }
-#progress{
+#progress {
   background: var(--title-color);
   width: 0%;
 }

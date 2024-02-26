@@ -8,14 +8,6 @@
 :root {
   --header-height: 3rem;
 
-  /*========== Colors ==========*/
-  --title-color: #292929;
-  --title-color-dark: #000000;
-  --text-color: #4d4d4d;
-  --body-color: #f1f1f1;
-  --container-color: #fff;
-  --border-color: #00000026;
-
   /*========== Font and typography ==========*/
   --body-font: "Poppins", sans-serif;
 
@@ -54,14 +46,6 @@
 }
 :root::-webkit-scrollbar {
   display: none;
-}
-.dark__mode {
-  --title-color: #c5c5c5;
-  --title-color-dark: #969696;
-  --text-color: #ffffff;
-  --body-color: #0d0d0d;
-  --container-color: #414141;
-  --border-color: #74747450;
 }
 /* Responsive typography */
 @media screen and (max-width: 992px) {
@@ -252,4 +236,31 @@ img {
     margin-left: var(--mb-1);
     margin-right: var(--mb-1);
   }
+}
+/* Themes */
+.dark__mode {
+  --title-color: #c5c5c5;
+  --title-color-dark: #969696;
+  --text-color: #ffffff;
+  --body-color: #0d0d0d;
+  --container-color: #414141;
+  --border-color: #74747450;
+}
+
+.blue__mode {
+  --title-color: #c3e1ff;
+  --title-color-dark: #b0cce7;
+  --text-color: #ffffff;
+  --body-color: #2b567f;
+  --container-color: #486b8f;
+  --border-color: #567594;
+}
+
+.white__mode {
+  --title-color: #292929;
+  --title-color-dark: #000000;
+  --text-color: #4d4d4d;
+  --body-color: #f1f1f1;
+  --container-color: #fff;
+  --border-color: #00000026;
 }
