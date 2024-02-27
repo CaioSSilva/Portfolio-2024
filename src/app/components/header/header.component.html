@@ -10,11 +10,12 @@
           <a
             href="#home"
             (click)="setNavActive('#home')"
+            (click)="setMenu()"
             class="nav__link"
             [ngClass]="{ 'active-link': navActive === '#home' }"
           >
             <fa-icon [icon]="homeIcon" class="nav__icon"></fa-icon>
-            {{'Home' | translate}}
+            {{ "Home" | translate }}
           </a>
         </li>
 
@@ -23,10 +24,11 @@
             href="#about"
             class="nav__link"
             (click)="setNavActive('#about')"
+            (click)="setMenu()"
             [ngClass]="{ 'active-link': navActive === '#about' }"
           >
             <fa-icon [icon]="userIcon" class="nav__icon"></fa-icon>
-            {{'About' | translate}}
+            {{ "About" | translate }}
           </a>
         </li>
 
@@ -35,10 +37,11 @@
             href="#skills"
             class="nav__link"
             (click)="setNavActive('#skills')"
+            (click)="setMenu()"
             [ngClass]="{ 'active-link': navActive === '#skills' }"
           >
             <fa-icon [icon]="fileIcon" class="nav__icon"></fa-icon>
-            {{'Skills' | translate}}
+            {{ "Skills" | translate }}
           </a>
         </li>
 
@@ -47,12 +50,13 @@
             href="#qualifications"
             class="nav__link"
             (click)="setNavActive('#qualifications')"
+            (click)="setMenu()"
             [ngClass]="{
               'active-link': navActive === '#qualifications'
             }"
           >
             <fa-icon [icon]="gradcapIcon" class="nav__icon"></fa-icon>
-            {{'Qualifications' | translate}}
+            {{ "Qualifications" | translate }}
           </a>
         </li>
 
@@ -61,10 +65,11 @@
             href="#portfolio"
             class="nav__link"
             (click)="setNavActive('#portfolio')"
+            (click)="setMenu()"
             [ngClass]="{ 'active-link': navActive === '#portfolio' }"
           >
             <fa-icon [icon]="wrenchIcon" class="nav__icon"></fa-icon>
-            {{'Portfolio' | translate}}
+            {{ "Portfolio" | translate }}
           </a>
         </li>
 
@@ -73,10 +78,11 @@
             href="#contact"
             class="nav__link"
             (click)="setNavActive('#contact')"
+            (click)="setMenu()"
             [ngClass]="{ 'active-link': navActive === '#contact' }"
           >
             <fa-icon [icon]="messageIcon" class="nav__icon"></fa-icon>
-            {{'Contact' | translate}}
+            {{ "Contact" | translate }}
           </a>
         </li>
       </ul>

@@ -6,6 +6,7 @@
   <div>
     <div
       (click)="changeLang(item.value)"
+      (click)="menuOpen = !menuOpen"
       class="lang"
       *ngFor="let item of languages"
     >

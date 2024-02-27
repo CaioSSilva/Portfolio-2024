@@ -40,6 +40,7 @@
                   type="radio"
                   [checked]="filters[i].checked"
                   (click)="filterClick(filters[i].name)"
+                  (click)="openFilterMenu()"
                 />
                 <span class="checkmark"></span>
               </label>

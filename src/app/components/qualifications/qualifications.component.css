@@ -181,7 +181,7 @@
 }
 
 .filter__container input:checked ~ .checkmark {
-  background-color: #2b2b2b;
+  background-color: var(--body-color);
 }
 
 .checkmark:after {
@@ -225,7 +225,7 @@
   .experience__data {
     grid-template-columns: max-content 1fr;
   }
-  .filter__menu{
+  .filter__menu {
     margin-right: 20px;
   }
 }
