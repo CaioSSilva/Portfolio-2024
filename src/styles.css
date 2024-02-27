@@ -248,11 +248,11 @@ img {
 }
 
 .blue__mode {
-  --title-color: #c3e1ff;
-  --title-color-dark: #b0cce7;
+  --title-color: #72b9ff;
+  --title-color-dark: #65a4e1;
   --text-color: #ffffff;
-  --body-color: #254a6d;
-  --container-color: #486b8f;
+  --body-color: #153553;
+  --container-color: #35597f;
   --border-color: #486c8fa4;
 }
 
