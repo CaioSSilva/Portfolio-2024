@@ -9,8 +9,11 @@
     [src]="music.recenttracks.track[0].image[2]['#text']"
     alt="track-cover"
   />
-  <div>
-    <p class="playing__now">{{ "Playing Now on TIDAL" | translate }}</p>
+  <div class="music__container">
+    <div>
+      <div class="bubble"></div>
+      <p class="playing__now">{{ "Playing Now on TIDAL" | translate }}</p>
+    </div>
     <h2>{{ music.recenttracks.track[0].name }}</h2>
     <p>{{ music.recenttracks.track[0].artist["#text"] }}</p>
   </div>

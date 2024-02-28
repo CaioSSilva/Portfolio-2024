@@ -25,16 +25,29 @@
   font-size: var(--small-font-size);
 }
 .playing__now {
-  transition: all;
-  animation: animation 3s ease-in-out infinite;
   font-size: var(--smaller-font-size) !important;
+  margin-left: 5px;
 }
-.playing__container > div {
-  padding-left: 0.7rem;
+.music__container {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 0px 5px 0.7rem;
   width: 250px;
   flex: 1;
 }
-@keyframes animation {
+.music__container div {
+  display: flex;
+  align-items: center;
+}
+.bubble {
+  contain: " ";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--title-color);
+  animation: blink 2s ease-in-out infinite;
+}
+@keyframes blink {
   50% {
     opacity: 0;
   }
@@ -42,10 +55,12 @@
     opacity: 1;
   }
 }
-
 /* For large devices */
 @media screen and (max-width: 992px) {
   .playing__container {
     width: 350px;
+  }
+  .music__container {
+    padding: 9.5px 0px 9.5px 0.7rem;
   }
 }
