@@ -1,5 +1,5 @@
 import { PlayingnowService } from './../../services/playingnow.service';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IMusic } from '../../interfaces/IMusic';
 
@@ -11,7 +11,7 @@ import { IMusic } from '../../interfaces/IMusic';
   templateUrl: './playingnow.component.html',
   styleUrls: ['./playingnow.component.css'],
 })
-export class PlayingnowComponent {
+export class PlayingnowComponent implements OnInit {
   music: IMusic = {
     recenttracks: {
       track: [
@@ -36,9 +36,12 @@ export class PlayingnowComponent {
     },
   };
 
-  constructor(private playingapi: PlayingnowService) {
+  constructor(private playingapi: PlayingnowService) {}
+
+  ngOnInit(): void {
     this.getMusic();
   }
+
   getMusic() {
     this.playingapi.GetMusic().subscribe((music) => {
       var musicImg = music.recenttracks.track[0].image[2]['#text'];
