@@ -1,10 +1,10 @@
 <section class="contact section" id="contact">
-  <h2 class="section__title">{{ "Contact" | translate }}</h2>
-  <span class="section__subtitle">{{ "Say hi" | translate }}</span>
+  <h2 class="section__title">{{ "Contact" }}</h2>
+  <span class="section__subtitle">{{ "Say hi" }}</span>
 
   <div class="contact__container container grid">
     <div class="contact__content">
-      <h3 class="contact__title">{{ "Talk to me" | translate }}</h3>
+      <h3 class="contact__title">{{ "Talk to me" }}</h3>
 
       <div class="contact__info">
         <div class="contact__card">
@@ -19,7 +19,7 @@
             rel="noreferrer"
             class="contact__button email_button"
           >
-            {{ "Discord Profile" | translate }}
+            {{ "Discord Profile" }}
 
             <fa-icon [icon]="rightIcon" class="contact__button-icon"></fa-icon>
           </a>
@@ -37,7 +37,7 @@
             rel="noreferrer"
             class="contact__button message_button"
           >
-            {{ "Message me" | translate }}
+            {{ "Message me" }}
             <fa-icon [icon]="rightIcon" class="contact__button-icon"></fa-icon>
           </a>
         </div>
@@ -46,13 +46,15 @@
           <fa-icon [icon]="envelopeIcon" class="contact__card-icon"></fa-icon>
 
           <h3 class="contact__card-title">Email</h3>
-          <span class="contact__card-data">caiosouzasilva13650&#64;gmail.com</span>
+          <span class="contact__card-data"
+            >caiosouzasilva13650&#64;gmail.com</span
+          >
         </div>
       </div>
     </div>
 
     <div class="contact__content">
-      <h3 class="contact__title">{{ "Write me your Message" | translate }}</h3>
+      <h3 class="contact__title">{{ "Write me your Message" }}</h3>
 
       <form
         method="POST"
@@ -62,9 +64,7 @@
         <input type="hidden" name="_next" value="https://caiossilva.com/" />
 
         <div class="contact__form-div">
-          <label for="name" class="contact__form-tag">{{
-            "Name" | translate
-          }}</label>
+          <label for="name" class="contact__form-tag">{{ "Name" }}</label>
           <input
             autocomplete="name"
             id="name"
@@ -78,7 +78,7 @@
 
         <div class="contact__form-div">
           <label for="email" class="contact__form-tag">{{
-            "Your Email" | translate
+            "Your Email"
           }}</label>
           <input
             autocomplete="email"
@@ -92,9 +92,7 @@
         </div>
 
         <div class="contact__form-div contact__form-area">
-          <label for="message" class="contact__form-tag">{{
-            "Message" | translate
-          }}</label>
+          <label for="message" class="contact__form-tag">{{ "Message" }}</label>
           <textarea
             id="message"
             name="message"
@@ -106,7 +104,7 @@
           ></textarea>
         </div>
         <button type="submit" class="button button--flex">
-          {{ "Send" | translate }}
+          {{ "Send" }}
 
           <fa-icon [icon]="paperplaneIcon" class="send__icon"></fa-icon>
         </button>

@@ -28,12 +28,16 @@
   column-gap: 2rem;
 }
 .footer__social-link {
+  width: 30px;
+  height: 30px;
   background-color: var(--title-color);
   color: var(--container-color);
   font-size: 1.125rem;
   padding: 0.4rem;
   border-radius: 0.5rem;
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .footer__social-link:hover .instagram_icon {
   color: #d8579e;

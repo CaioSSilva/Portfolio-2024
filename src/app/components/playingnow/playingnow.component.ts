@@ -1,13 +1,13 @@
+import { PlayingnowService } from './../../services/playingnow.service';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PlayingnowService } from 'src/app/services/playingnow.service';
-import { IMusic } from 'src/app/interfaces/IMusic';
-import { TranslateModule } from '@ngx-translate/core';
+import { IMusic } from '../../interfaces/IMusic';
 
 @Component({
   selector: 'app-playingnow',
   standalone: true,
-  imports: [CommonModule, TranslateModule],
+  imports: [CommonModule],
+  providers: [PlayingnowService],
   templateUrl: './playingnow.component.html',
   styleUrls: ['./playingnow.component.css'],
 })
@@ -49,8 +49,5 @@ export class PlayingnowComponent {
       }
       this.music = music;
     });
-    setTimeout(() => {
-      this.getMusic();
-    }, 60000);
   }
 }

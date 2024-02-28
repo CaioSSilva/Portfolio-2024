@@ -1,8 +1,6 @@
 <section class="work section" id="portfolio">
-  <h2 class="section__title">{{ "Portfolio" | translate }}</h2>
-  <span class="section__subtitle">{{
-    "Most recent projects" | translate
-  }}</span>
+  <h2 class="section__title">{{ "Portfolio" }}</h2>
+  <span class="section__subtitle">{{ "Most recent projects" }}</span>
   <div class="work__container container grid">
     <div class="work__card" *ngFor="let item of repos">
       <img
@@ -13,14 +11,14 @@
         alt=""
       />
       <h3 class="work__title">{{ item.name }}</h3>
-      <p class="work__description">{{ item.description | translate }}</p>
+      <p class="work__description">{{ item.description }}</p>
       <a
         [href]="item.html_url"
         target="_blank"
         class="work__button"
         rel="noreferrer"
       >
-        {{ "View on Github" | translate }}
+        {{ "View on Github" }}
         <fa-icon [icon]="arrowRight" class="work__button-icon"></fa-icon>
       </a>
     </div>
