@@ -1,17 +1,17 @@
-import { PlayingnowService } from './../../services/playingnow.service';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IMusic } from '../../interfaces/IMusic';
+import { PlayingnowService } from 'src/app/services/playingnow.service';
+import { IMusic } from 'src/app/interfaces/IMusic';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-playingnow',
   standalone: true,
-  imports: [CommonModule],
-  providers: [PlayingnowService],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './playingnow.component.html',
   styleUrls: ['./playingnow.component.css'],
 })
-export class PlayingnowComponent implements OnInit {
+export class PlayingnowComponent {
   music: IMusic = {
     recenttracks: {
       track: [
@@ -36,12 +36,9 @@ export class PlayingnowComponent implements OnInit {
     },
   };
 
-  constructor(private playingapi: PlayingnowService) {}
-
-  ngOnInit(): void {
+  constructor(private playingapi: PlayingnowService) {
     this.getMusic();
   }
-
   getMusic() {
     this.playingapi.GetMusic().subscribe((music) => {
       var musicImg = music.recenttracks.track[0].image[2]['#text'];
@@ -52,5 +49,8 @@ export class PlayingnowComponent implements OnInit {
       }
       this.music = music;
     });
+    setTimeout(() => {
+      this.getMusic();
+    }, 60000);
   }
 }

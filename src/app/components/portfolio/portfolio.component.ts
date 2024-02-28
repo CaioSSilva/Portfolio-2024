@@ -1,15 +1,15 @@
 import { GithubService } from './../../services/github.service';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IWork } from '../../interfaces/IWork';
+import { IWork } from 'src/app/interfaces/IWork';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [CommonModule, FontAwesomeModule],
-  providers: [GithubService],
+  imports: [CommonModule, FontAwesomeModule, TranslateModule],
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.css'],
 })

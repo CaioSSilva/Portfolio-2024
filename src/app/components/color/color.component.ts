@@ -13,13 +13,28 @@ import { faPaintBrush } from '@fortawesome/free-solid-svg-icons';
 export class ColorComponent {
   menuOpened: boolean = false;
   icon = faPaintBrush;
+  root = <DOMTokenList>document.querySelector(':root')?.classList;
+  white = document.querySelector('white');
+  dark = document.querySelector('dark');
+  blue = document.querySelector('blue');
 
+  favicon = <HTMLLinkElement>(
+    document.querySelector("link[rel='shortcut icon']")
+  );
+
+  constructor() {
+    if (localStorage.getItem('theme')) {
+      this.setTheme(<string>localStorage.getItem('theme'));
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      this.setTheme('dark__mode');
+    } else {
+      this.setTheme('white__mode');
+    }
+  }
   setTheme(theme: string) {
     localStorage.setItem('theme', theme);
     document.querySelector(':root')?.removeAttribute('class');
-    document
-      .querySelector(':root')
-      ?.classList.add(<string>localStorage.getItem('theme'));
+    this.root.add(<string>localStorage.getItem('theme'));
     this.setFavicon(`'../../../assets/${theme}.ico`);
   }
   openMenu() {

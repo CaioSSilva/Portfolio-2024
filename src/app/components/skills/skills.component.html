@@ -1,19 +1,22 @@
 <section class="skills section" id="skills">
-  <h2 class="section__title">{{ "Skills" }}</h2>
-  <span class="section__subtitle">{{ "My technical level" }}</span>
+  <h2 class="section__title">{{'Skills'| translate }}</h2>
+  <span class="section__subtitle">{{'My technical level'| translate }}</span>
 
   <div class="skills__container container grid">
     <div class="skills__content">
-      <h3 class="skills__title">{{ "Frontend developer" }}</h3>
+      <h3 class="skills__title">{{'Frontend developer'| translate }}</h3>
 
       <div class="skills__box">
         <div class="skills__group">
-          <div class="skills__data" *ngFor="let skill of skills.frontend">
+          <div
+            class="skills__data"
+            *ngFor="let skill of skills.frontend"
+          >
             <fa-icon [icon]="check"></fa-icon>
 
             <div>
               <h3 class="skills__name">{{ skill.name }}</h3>
-              <span class="skills__level">{{ skill.level }}</span>
+              <span class="skills__level">{{ skill.level | translate}}</span>
             </div>
           </div>
         </div>

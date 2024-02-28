@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import {
+  Component,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { ColorComponent } from '../color/color.component';
 import {
   faGithub,
   faInstagram,
@@ -9,10 +10,12 @@ import {
   faXTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 import { faArrowDown, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { ColorComponent } from '../color/color.component';
+import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, FontAwesomeModule, ColorComponent],
+  imports: [CommonModule, FontAwesomeModule, TranslateModule, ColorComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })

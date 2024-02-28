@@ -11,7 +11,7 @@
       *ngFor="let item of languages"
     >
       <img alt="lang-flag" title="lang-flag" [src]="item.flag" class="flag" />
-      <p>{{ item.name }}</p>
+      <p>{{ item.name | translate }}</p>
     </div>
   </div>
 </div>

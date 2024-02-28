@@ -9,11 +9,12 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import qualifications from './qualifications';
-import { IQualification } from '../../interfaces/IQualification';
+import { IQualification } from 'src/app/interfaces/IQualification';
+import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-qualifications',
   standalone: true,
-  imports: [CommonModule, FontAwesomeModule],
+  imports: [CommonModule, FontAwesomeModule, TranslateModule],
   templateUrl: './qualifications.component.html',
   styleUrls: ['./qualifications.component.css'],
 })

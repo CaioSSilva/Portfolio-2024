@@ -1,6 +1,6 @@
 <section class="about section" id="about">
-  <h2 class="section__title">{{ "About Me" }}</h2>
-  <span class="section__subtitle">{{ "My introduction" }}</span>
+  <h2 class="section__title">{{ "About Me" | translate }}</h2>
+  <span class="section__subtitle">{{ "My introduction" | translate }}</span>
 
   <div class="about__container container grid">
     <div class="about__imgs">
@@ -18,18 +18,19 @@
       <div class="about__info grid">
         <a class="about__box" href="#skills">
           <fa-icon [icon]="awardIcon"></fa-icon>
-          <h2 class="about__title">{{ "Experience" }}</h2>
-          <span class="about__subtitle">{{ "4 Years Study" }}</span>
+          <h2 class="about__title">{{ "Experience" | translate }}</h2>
+          <span class="about__subtitle">{{ "4 Years Study" | translate }}</span>
         </a>
         <a class="about__box" href="#portfolio">
           <fa-icon [icon]="briefcaseIcon"></fa-icon>
-          <h2 class="about__title">{{ "Completed" }}</h2>
-          <span class="about__subtitle">{{ "13 + Projects" }}</span>
+          <h2 class="about__title">{{ "Completed" | translate }}</h2>
+          <span class="about__subtitle">{{ "13 + Projects" | translate }}</span>
         </a>
       </div>
       <p class="about__description">
         {{
           "My name is Caio Souza, I'm 19 years old and I've been a frontend developer for 4 years"
+            | translate
         }}
       </p>
 
@@ -38,7 +39,7 @@
         href="../../../assets/Resume_2_Langs.pdf"
         class="button button--flex"
       >
-        {{ "Curriculum" }}
+        {{ "Curriculum" | translate }}
         <fa-icon [icon]="filecontractIcon" class="file"></fa-icon>
       </a>
     </div>
