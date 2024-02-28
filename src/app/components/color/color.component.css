@@ -38,13 +38,13 @@
   cursor: pointer;
 }
 .white {
-  background-color: #f1f1f1;
+  background-color: #fff;
 }
 .dark {
-  background-color: #0d0d0d;
+  background-color: #414141;
 }
 .blue {
-  background-color: #2b567f;
+  background-color: #2e4d6e;
 }
 .active {
   display: none;

@@ -31,7 +31,6 @@ export class PlayingnowComponent {
             },
           ],
           name: '',
-          url: '',
         },
       ],
     },
@@ -52,6 +51,6 @@ export class PlayingnowComponent {
     });
     setTimeout(() => {
       this.getMusic();
-    }, 15000);
+    }, 60000);
   }
 }
