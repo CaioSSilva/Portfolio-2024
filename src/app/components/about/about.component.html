@@ -35,14 +35,10 @@
         }}
       </p>
 
-      <a
-        download=""
-        href="../../../assets/Resume_2_Langs.pdf"
-        class="button button--flex"
-      >
+      <div (click)="DownloadResume()" class="button button--flex">
         {{ "Curriculum" | translate }}
         <fa-icon [icon]="filecontractIcon" class="file"></fa-icon>
-      </a>
+      </div>
     </div>
   </div>
 </section>
