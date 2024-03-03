@@ -10,7 +10,6 @@
         title="me-art"
         src="../../../assets/about.webp"
         class="about__img"
-        alt=""
       />
       <app-playingnow></app-playingnow>
     </div>
@@ -35,9 +34,46 @@
         }}
       </p>
 
-      <div (click)="DownloadResume()" class="button button--flex">
-        {{ "Curriculum" | translate }}
-        <fa-icon [icon]="filecontractIcon" class="file"></fa-icon>
+      <div>
+        <div class="button button--flex pointer" (click)="Download()">
+          {{ "Resume" | translate }}
+          <fa-icon [icon]="filecontractIcon" class="file"></fa-icon>
+        </div>
+        <div
+          class="opt-container"
+          [ngStyle]="opened ? { opacity: '1' } : { opacity: '0' }"
+        >
+          <div
+            class="toggler"
+            (click)="
+              saveFile(
+                '../../../assets/Currículo.pdf',
+                'Curriculo - Caio Souza Silva'
+              )
+            "
+          >
+            <img
+              src="../../../assets/br-icon.webp"
+              alt="br-flag"
+              title="br-flag"
+            />
+          </div>
+          <div
+            class="toggler"
+            (click)="
+              saveFile(
+                '../../../assets/Resume.pdf',
+                'Resume - Caio Souza Silva'
+              )
+            "
+          >
+            <img
+              src="../../../assets/en-icon.webp"
+              alt="en-flag"
+              title="-flag"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -7,7 +7,7 @@ import {
   faFileContract,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-about',
@@ -22,21 +22,13 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrls: ['./about.component.css'],
 })
 export class AboutComponent {
+  opened: boolean = false;
   awardIcon = faAward;
   briefcaseIcon = faBriefcase;
   filecontractIcon = faFileContract;
 
-  constructor(private translate: TranslateService) {}
-
-  DownloadResume() {
-    if (this.translate.currentLang == 'pt') {
-      this.saveFile(
-        '../../../assets/Currículo.pdf',
-        'Curriculo - Caio Souza Silva'
-      );
-    } else {
-      this.saveFile('../../../assets/Resume.pdf', 'Resume - Caio Souza Silva');
-    }
+  Download() {
+    this.opened = !this.opened;
   }
 
   saveFile(url: string, filename: string) {

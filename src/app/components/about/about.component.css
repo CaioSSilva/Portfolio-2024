@@ -60,6 +60,28 @@
   padding: 0 4rem 0 0;
   margin-bottom: var(--mb-2-5);
 }
+.pointer {
+  cursor: pointer;
+}
+.opt-container {
+  display: flex;
+  justify-content: space-around;
+  width: 160px;
+  margin-top: 15px;
+}
+.toggler {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--title-color);
+  width: 60px;
+  height: 40px;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+.toggler:hover {
+  background: var(--title-color-dark);
+}
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
 @media screen and (max-width: 992px) {
@@ -83,6 +105,10 @@
   .about__description {
     padding: 0 5rem;
     margin-bottom: 2rem;
+  }
+  .opt-container {
+    margin: 15px auto;
+    transition: 0.2s;
   }
 }
 /* For medium devices */
