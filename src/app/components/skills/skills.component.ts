@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterContentInit, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -17,7 +17,7 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.css'],
 })
-export class SkillsComponent {
+export class SkillsComponent implements AfterContentInit {
   check = faCircleCheck;
   skills = {
     frontend: [
@@ -57,4 +57,8 @@ export class SkillsComponent {
   };
   loaded = false;
   style = <string>document.querySelector(':root')?.classList[0];
+
+  ngAfterContentInit() {
+    this.loaded = !this.loaded;
+  }
 }

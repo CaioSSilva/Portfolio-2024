@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterContentInit, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faPaintBrush } from '@fortawesome/free-solid-svg-icons';
@@ -11,15 +11,19 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
   templateUrl: './color.component.html',
   styleUrls: ['./color.component.css'],
 })
-export class ColorComponent {
+export class ColorComponent implements AfterContentInit {
   menuOpened: boolean = false;
-  loaded: boolean = true;
+  loaded: boolean = false;
   style = document.querySelector(':root')?.classList[0];
   icon = faPaintBrush;
   root = <DOMTokenList>document.querySelector(':root')?.classList;
   white = document.querySelector('white');
   dark = document.querySelector('dark');
   blue = document.querySelector('blue');
+
+  ngAfterContentInit() {
+    this.loaded = !this.loaded;
+  }
 
   favicon = <HTMLLinkElement>(
     document.querySelector("link[rel='shortcut icon']")

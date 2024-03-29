@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterContentInit, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PlayingnowService } from 'src/app/services/playingnow.service';
 import { IMusic } from 'src/app/interfaces/IMusic';
@@ -42,6 +42,7 @@ export class PlayingnowComponent {
   constructor(private playingapi: PlayingnowService) {
     this.getMusic();
   }
+
   getMusic() {
     this.playingapi.GetMusic().subscribe((music) => {
       var musicImg = music.recenttracks.track[0].image[2]['#text'];

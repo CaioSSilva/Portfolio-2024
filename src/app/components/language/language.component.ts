@@ -1,4 +1,9 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import {
+  AfterContentInit,
+  Component,
+  EventEmitter,
+  Output,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -17,7 +22,11 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
   templateUrl: './language.component.html',
   styleUrls: ['./language.component.css'],
 })
-export class LanguageComponent {
+export class LanguageComponent implements AfterContentInit {
+  ngAfterContentInit() {
+    this.loaded = !this.loaded;
+  }
+
   @Output() langChangeEvent = new EventEmitter<string>();
 
   faGlobe = faGlobe;

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterContentInit, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { faDiscord, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import {
@@ -22,7 +22,7 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css'],
 })
-export class ContactComponent {
+export class ContactComponent implements AfterContentInit {
   discordIcon = faDiscord;
   rightIcon = faArrowRight;
   whatsIcon = faWhatsapp;
@@ -30,4 +30,8 @@ export class ContactComponent {
   paperplaneIcon = faPaperPlane;
   loaded = false;
   style = <string>document.querySelector(':root')?.classList[0];
+
+  ngAfterContentInit() {
+    this.loaded = !this.loaded;
+  }
 }

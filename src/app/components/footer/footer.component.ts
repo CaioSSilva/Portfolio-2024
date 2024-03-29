@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterContentInit, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   faGithub,
@@ -22,11 +22,15 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css'],
 })
-export class FooterComponent {
+export class FooterComponent implements AfterContentInit {
   instaIcon = faInstagram;
   githubIcon = faGithub;
   linkedinIcon = faLinkedin;
   twitterIcon = faXTwitter;
   loaded = false;
   style = <string>document.querySelector(':root')?.classList[0];
+
+  ngAfterContentInit() {
+    this.loaded = !this.loaded;
+  }
 }

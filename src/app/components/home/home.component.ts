@@ -24,7 +24,10 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent {
+export class HomeComponent implements AfterContentInit {
+  ngAfterContentInit() {
+    this.loaded = !this.loaded;
+  }
   instaIcon = faInstagram;
   githubIcon = faGithub;
   linkedinIcon = faLinkedin;

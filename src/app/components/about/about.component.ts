@@ -23,13 +23,17 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css'],
 })
-export class AboutComponent {
+export class AboutComponent implements AfterContentInit {
   opened: boolean = false;
   awardIcon = faAward;
   briefcaseIcon = faBriefcase;
   filecontractIcon = faFileContract;
   loaded = false;
   style = <string>document.querySelector(':root')?.classList[0];
+
+  ngAfterContentInit() {
+    this.loaded = !this.loaded;
+  }
 
   Download() {
     this.opened = !this.opened;

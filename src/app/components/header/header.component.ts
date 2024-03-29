@@ -30,7 +30,7 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
 })
-export class HeaderComponent {
+export class HeaderComponent implements AfterContentInit {
   homeIcon = faHome;
   userIcon = faUser;
   fileIcon = faFileAlt;
@@ -48,7 +48,9 @@ export class HeaderComponent {
   onWindowScroll() {
     this.progress();
   }
-
+  ngAfterContentInit() {
+    this.loaded = !this.loaded;
+  }
   setNavActive(name: string) {
     this.navActive = name;
   }

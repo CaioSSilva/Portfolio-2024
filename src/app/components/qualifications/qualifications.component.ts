@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterContentInit, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   faBriefcase,
@@ -24,7 +24,7 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
   templateUrl: './qualifications.component.html',
   styleUrls: ['./qualifications.component.css'],
 })
-export class QualificationsComponent {
+export class QualificationsComponent implements AfterContentInit {
   filterIcon = faFilter;
   calendarIcon = faCalendar;
   certificationIcon = faFilePdf;
@@ -37,6 +37,10 @@ export class QualificationsComponent {
   tab = 0;
   loaded = false;
   style = <string>document.querySelector(':root')?.classList[0];
+
+  ngAfterContentInit() {
+    this.loaded = !this.loaded;
+  }
 
   filters = [
     {
