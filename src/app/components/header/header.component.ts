@@ -1,4 +1,10 @@
-import { Component, HostListener} from '@angular/core';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+import {
+  AfterContentInit,
+  AfterViewInit,
+  Component,
+  HostListener,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
@@ -15,11 +21,16 @@ import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [CommonModule, FontAwesomeModule, TranslateModule],
+  imports: [
+    CommonModule,
+    FontAwesomeModule,
+    TranslateModule,
+    NgxSkeletonLoaderModule,
+  ],
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
 })
-export class HeaderComponent{
+export class HeaderComponent {
   homeIcon = faHome;
   userIcon = faUser;
   fileIcon = faFileAlt;
@@ -30,6 +41,14 @@ export class HeaderComponent{
   gripIcon = faGrip;
   menu = false;
   navActive = '#home';
+  style = <string>document.querySelector(':root')?.classList[0];
+  loaded = false;
+
+  constructor() {
+    setTimeout(() => {
+      this.loaded = !this.loaded;
+    }, 400);
+  }
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {

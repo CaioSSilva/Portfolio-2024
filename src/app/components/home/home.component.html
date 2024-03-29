@@ -2,7 +2,19 @@
   <div class="home__container container grid">
     <div class="home__content grid">
       <div class="home__social">
+        <ngx-skeleton-loader
+          [theme]="{
+            display: 'flex',
+            borderRadius: '20px',
+            flexDirection: 'column'
+          }"
+          count="4"
+          appearance="circle"
+          [animation]="style == 'dark-mode' ? 'progress' : 'progress-dark'"
+          *ngIf="!loaded"
+        />
         <a
+          *ngIf="loaded"
           href="https://www.instagram.com/caios_silvaa/"
           target="_blank"
           rel="noreferrer"
@@ -12,6 +24,7 @@
           <fa-icon [icon]="instaIcon"></fa-icon>
         </a>
         <a
+          *ngIf="loaded"
           href="https://github.com/CaioSSilva"
           target="_blank"
           rel="noreferrer"
@@ -21,6 +34,7 @@
           <fa-icon [icon]="githubIcon"></fa-icon>
         </a>
         <a
+          *ngIf="loaded"
           href="https://twitter.com/Caiomas_levanto"
           target="_blank"
           rel="noreferrer"
@@ -30,6 +44,7 @@
           <fa-icon [icon]="twitterIcon"></fa-icon>
         </a>
         <a
+          *ngIf="loaded"
           href="https://www.linkedin.com/in/caio-souza-silva/"
           target="_blank"
           rel="noreferrer"
@@ -41,7 +56,15 @@
       </div>
       <div class="home__img">
         <app-color></app-color>
+        <ngx-skeleton-loader
+          count="1"
+          *ngIf="!loaded"
+          appearance="circle"
+          [animation]="style == 'dark-mode' ? 'progress' : 'progress-dark'"
+          [theme]="{ width: '200px', borderRadius: '20px', height: '200px' }"
+        />
         <img
+          *ngIf="loaded"
           fetchpriority="high"
           src="../../../assets/profile.webp"
           alt="me"
@@ -49,17 +72,41 @@
         />
       </div>
       <div class="home__data">
-        <h1 class="home__title">Caio Souza</h1>
+        <ngx-skeleton-loader
+          [theme]="{
+            display: 'flex',
+            flexDirection: 'column',
+            borderRadius: '20px',
+            gap: '15px'
+          }"
+          count="4"
+          appearance="line"
+          [animation]="style == 'dark-mode' ? 'progress' : 'progress-dark'"
+          *ngIf="!loaded"
+        />
+        <h1 *ngIf="loaded" class="home__title">Caio Souza</h1>
 
-        <h2 class="home__subtitle">{{ "Web Developer" | translate }}</h2>
-        <p class="home__description">
+        <h2 *ngIf="loaded" class="home__subtitle">
+          {{ "Web Developer" | translate }}
+        </h2>
+        <p *ngIf="loaded" class="home__description">
           {{
             "Software developer, writer, intern at IBM Brazil and passionate to my work!"
               | translate
           }}
         </p>
-
-        <a href="#contact" class="button button--flex">
+        <ngx-skeleton-loader
+          *ngIf="!loaded"
+          count="1"
+          [animation]="style == 'dark-mode' ? 'progress' : 'progress-dark'"
+          [theme]="{
+            width: '150px',
+            height: '50px',
+            borderRadius: '20px',
+            marginTop: '30px'
+          }"
+        />
+        <a *ngIf="loaded" href="#contact" class="button button--flex">
           <p>{{ "Say Hello" | translate }}</p>
           <fa-icon
             [icon]="paperplaneIcon"
@@ -70,7 +117,16 @@
     </div>
 
     <div class="home__scroll">
-      <a href="#about" class="home__scroll-button button--flex">
+      <ngx-skeleton-loader
+        *ngIf="!loaded"
+        count="1"
+        [animation]="style == 'dark-mode' ? 'progress' : 'progress-dark'"
+        [theme]="{
+          borderRadius: '20px',
+          width: '200px'
+        }"
+      />
+      <a *ngIf="loaded" href="#about" class="home__scroll-button button--flex">
         <div class="mouse">
           <div class="scroll"></div>
         </div>

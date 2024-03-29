@@ -1,10 +1,38 @@
 <section class="work section" id="portfolio">
-  <h2 class="section__title">{{ "Portfolio" | translate }}</h2>
-  <span class="section__subtitle">{{
+  <ngx-skeleton-loader
+    count="2"
+    *ngIf="!loaded"
+    [theme]="{
+      display: 'flex',
+      flexDirection: 'collum',
+      width: '200px',
+      margin: '10px auto',
+      borderRadius: '20px'
+    }"
+  />
+  <h2 *ngIf="loaded" class="section__title">{{ "Portfolio" | translate }}</h2>
+  <span *ngIf="loaded" class="section__subtitle">{{
     "Most recent projects" | translate
   }}</span>
-  <div class="work__container container grid">
-    <div class="work__card" *ngFor="let item of repos">
+  <div
+    [style]="loaded ? 'display:grid' : 'display:flex'"
+    class="work__container container grid"
+  >
+    <ngx-skeleton-loader
+      count="1"
+      *ngIf="!loaded"
+      [theme]="{
+        contains: ' ',
+        height: '350px',
+        width: '350px',
+        borderRadius: '20px'
+      }"
+    />
+    <div
+      [style]="loaded ? 'display:grid' : 'display:none'"
+      class="work__card"
+      *ngFor="let item of repos"
+    >
       <img
         alt="project-img-git"
         title="project-img"

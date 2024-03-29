@@ -2,16 +2,19 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faPaintBrush } from '@fortawesome/free-solid-svg-icons';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 @Component({
   selector: 'app-color',
   standalone: true,
-  imports: [CommonModule, FontAwesomeModule],
+  imports: [NgxSkeletonLoaderModule, CommonModule, FontAwesomeModule],
   templateUrl: './color.component.html',
   styleUrls: ['./color.component.css'],
 })
 export class ColorComponent {
   menuOpened: boolean = false;
+  loaded: boolean = false;
+  style = document.querySelector(':root')?.classList[0];
   icon = faPaintBrush;
   root = <DOMTokenList>document.querySelector(':root')?.classList;
   white = document.querySelector('white');
@@ -23,6 +26,10 @@ export class ColorComponent {
   );
 
   constructor() {
+    setTimeout(() => {
+      this.loaded = !this.loaded;
+    }, 400);
+
     if (localStorage.getItem('theme')) {
       this.setTheme(<string>localStorage.getItem('theme'));
     } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -31,6 +38,7 @@ export class ColorComponent {
       this.setTheme('white__mode');
     }
   }
+
   setTheme(theme: string) {
     localStorage.setItem('theme', theme);
     document.querySelector(':root')?.removeAttribute('class');

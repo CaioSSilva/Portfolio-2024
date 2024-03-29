@@ -1,22 +1,43 @@
 <section class="skills section" id="skills">
-  <h2 class="section__title">{{'Skills'| translate }}</h2>
-  <span class="section__subtitle">{{'My technical level'| translate }}</span>
+  <ngx-skeleton-loader
+    count="2"
+    *ngIf="!loaded"
+    [theme]="{
+      display: 'flex',
+      flexDirection: 'collum',
+      width: '200px',
+      margin: '10px auto'
+    }"
+  />
+  <h2 *ngIf="loaded" class="section__title">{{ "Skills" | translate }}</h2>
+  <span *ngIf="loaded" class="section__subtitle">{{
+    "My technical level" | translate
+  }}</span>
 
   <div class="skills__container container grid">
-    <div class="skills__content">
-      <h3 class="skills__title">{{'Frontend developer'| translate }}</h3>
+    <ngx-skeleton-loader
+      count="1"
+      *ngIf="!loaded"
+      [theme]="{
+        display: 'flex',
+        flexDirection: 'collum',
+        borderRadius: '20px',
+        width: '300px',
+        height: '300px',
+        margin: '10px auto'
+      }"
+    />
+    <div *ngIf="loaded" class="skills__content">
+      <h3 class="skills__title">{{ "Frontend developer" | translate }}</h3>
 
       <div class="skills__box">
         <div class="skills__group">
-          <div
-            class="skills__data"
-            *ngFor="let skill of skills.frontend"
-          >
+          <div class="skills__data" *ngFor="let skill of skills.frontend">
             <fa-icon [icon]="check"></fa-icon>
 
             <div>
               <h3 class="skills__name">{{ skill.name }}</h3>
-              <span class="skills__level">{{ skill.level | translate}}</span>
+              <span class="skills__level">{{ skill.level | translate }}</span>
             </div>
           </div>
         </div>

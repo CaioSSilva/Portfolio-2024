@@ -3,10 +3,25 @@
     <div id="progress"></div>
   </div>
   <nav class="nav container">
-    <a href="/" class="nav__logo"> Caio </a>
+    <ngx-skeleton-loader
+      *ngIf="!loaded"
+      count="1"
+      [animation]="style == 'dark-mode' ? 'progress' : 'progress-dark'"
+      [theme]="{
+        borderRadius: '20px',
+        width: '40px'
+      }"
+    />
+    <a *ngIf="loaded" href="/" class="nav__logo"> Caio </a>
     <div [ngClass]="{ 'show-menu': menu }" class="nav__menu">
       <ul class="nav__list grid">
-        <li class="nav__item">
+        <ngx-skeleton-loader
+          *ngIf="!loaded"
+          count="6"
+          [animation]="style == 'dark-mode' ? 'progress' : 'progress-dark'"
+          [theme]="{ width: '60px', borderRadius: '20px', marginRight: '15px' }"
+        />
+        <li *ngIf="loaded" class="nav__item">
           <a
             href="#home"
             (click)="setNavActive('#home')"
@@ -19,7 +34,7 @@
           </a>
         </li>
 
-        <li class="nav__item">
+        <li *ngIf="loaded" class="nav__item">
           <a
             href="#about"
             class="nav__link"
@@ -32,7 +47,7 @@
           </a>
         </li>
 
-        <li class="nav__item">
+        <li *ngIf="loaded" class="nav__item">
           <a
             href="#skills"
             class="nav__link"
@@ -45,7 +60,7 @@
           </a>
         </li>
 
-        <li class="nav__item">
+        <li *ngIf="loaded" class="nav__item">
           <a
             href="#qualifications"
             class="nav__link"
@@ -60,7 +75,7 @@
           </a>
         </li>
 
-        <li class="nav__item">
+        <li *ngIf="loaded" class="nav__item">
           <a
             href="#portfolio"
             class="nav__link"
@@ -73,7 +88,7 @@
           </a>
         </li>
 
-        <li class="nav__item">
+        <li *ngIf="loaded" class="nav__item">
           <a
             href="#contact"
             class="nav__link"
@@ -95,7 +110,12 @@
     </div>
 
     <div class="nav__toggle" (click)="setMenu()">
-      <fa-icon [icon]="gripIcon"></fa-icon>
+      <ngx-skeleton-loader
+        *ngIf="!loaded"
+        [animation]="style == 'dark-mode' ? 'progress' : 'progress-dark'"
+        [theme]="{ width: '20px' }"
+      />
+      <fa-icon *ngIf="loaded" [icon]="gripIcon"></fa-icon>
     </div>
   </nav>
 </header>

@@ -1,6 +1,5 @@
-import {
-  Component,
-} from '@angular/core';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+import { AfterContentInit, AfterViewInit, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
@@ -15,7 +14,13 @@ import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, FontAwesomeModule, TranslateModule, ColorComponent],
+  imports: [
+    CommonModule,
+    FontAwesomeModule,
+    TranslateModule,
+    ColorComponent,
+    NgxSkeletonLoaderModule,
+  ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
@@ -26,4 +31,12 @@ export class HomeComponent {
   twitterIcon = faXTwitter;
   paperplaneIcon = faPaperPlane;
   arrowdownIcon = faArrowDown;
+  loaded = false;
+  style = <string>document.querySelector(':root')?.classList[0];
+
+  constructor() {
+    setTimeout(() => {
+      this.loaded = !this.loaded;
+    }, 400);
+  }
 }

@@ -3,11 +3,17 @@ import { CommonModule } from '@angular/common';
 import { faCircleCheck } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TranslateModule } from '@ngx-translate/core';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 @Component({
   selector: 'app-skills',
   standalone: true,
-  imports: [CommonModule, FontAwesomeModule, TranslateModule],
+  imports: [
+    CommonModule,
+    NgxSkeletonLoaderModule,
+    FontAwesomeModule,
+    TranslateModule,
+  ],
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.css'],
 })
@@ -49,4 +55,12 @@ export class SkillsComponent {
       },
     ],
   };
+  loaded = false;
+  style = <string>document.querySelector(':root')?.classList[0];
+
+  constructor() {
+    setTimeout(() => {
+      this.loaded = !this.loaded;
+    }, 400);
+  }
 }

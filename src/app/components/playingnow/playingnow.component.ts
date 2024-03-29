@@ -3,15 +3,18 @@ import { CommonModule } from '@angular/common';
 import { PlayingnowService } from 'src/app/services/playingnow.service';
 import { IMusic } from 'src/app/interfaces/IMusic';
 import { TranslateModule } from '@ngx-translate/core';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 @Component({
   selector: 'app-playingnow',
   standalone: true,
-  imports: [CommonModule, TranslateModule],
+  imports: [NgxSkeletonLoaderModule, CommonModule, TranslateModule],
   templateUrl: './playingnow.component.html',
   styleUrls: ['./playingnow.component.css'],
 })
 export class PlayingnowComponent {
+  loaded = false;
+  style = <string>document.querySelector(':root')?.classList[0];
   music: IMusic = {
     recenttracks: {
       track: [
@@ -48,8 +51,10 @@ export class PlayingnowComponent {
           '../../../assets/tidal.webp';
       }
       this.music = music;
+      this.loaded = !this.loaded;
     });
     setTimeout(() => {
+      this.loaded = false;
       this.getMusic();
     }, 60000);
   }
