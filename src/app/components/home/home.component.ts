@@ -37,6 +37,6 @@ export class HomeComponent {
   constructor() {
     setTimeout(() => {
       this.loaded = !this.loaded;
-    }, 400);
+    }, 1000);
   }
 }

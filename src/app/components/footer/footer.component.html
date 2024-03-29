@@ -1,17 +1,30 @@
 <footer class="footer">
   <div class="footer__container container">
-    <h2 class="footer__title">Caio</h2>
+    <h2 *ngIf="loaded" class="footer__title">Caio</h2>
 
     <ul class="footer__list">
-      <li>
+      <ngx-skeleton-loader
+        [theme]="{
+          display: 'flex',
+          flexDirection: 'collum',
+          width: '240px',
+          borderRadius: '20px',
+          marginLeft: '10px'
+        }"
+        count="2"
+        appearance="line"
+        [animation]="style == 'dark-mode' ? 'progress' : 'progress-dark'"
+        *ngIf="!loaded"
+      />
+      <li *ngIf="loaded">
         <a href="#about" class="footer__link">{{ "About" | translate }}</a>
       </li>
 
-      <li>
+      <li *ngIf="loaded">
         <a href="#skills" class="footer__link">{{ "Skills" | translate }}</a>
       </li>
 
-      <li>
+      <li *ngIf="loaded">
         <a href="#portfolio" class="footer__link">{{
           "Portfolio" | translate
         }}</a>
@@ -19,7 +32,20 @@
     </ul>
 
     <div class="footer__social">
+      <ngx-skeleton-loader
+        [theme]="{
+          width: '40px',
+          height: '40px',
+          borderRadius: '5px',
+          marginLeft: '10px'
+        }"
+        count="4"
+        appearance="line"
+        [animation]="style == 'dark-mode' ? 'progress' : 'progress-dark'"
+        *ngIf="!loaded"
+      />
       <a
+        *ngIf="loaded"
         href="https://www.instagram.com/caios_silvaa/"
         target="_blank"
         rel="noreferrer"
@@ -29,6 +55,7 @@
         <fa-icon [icon]="instaIcon" class="instagram_icon"></fa-icon>
       </a>
       <a
+        *ngIf="loaded"
         href="https://github.com/CaioSSilva"
         target="_blank"
         rel="noreferrer"
@@ -38,6 +65,7 @@
         <fa-icon [icon]="githubIcon" class="github_icon"></fa-icon>
       </a>
       <a
+        *ngIf="loaded"
         href="https://twitter.com/Caiomas_levanto"
         target="_blank"
         rel="noreferrer"
@@ -47,6 +75,7 @@
         <fa-icon [icon]="twitterIcon" class="twitter_icon"></fa-icon>
       </a>
       <a
+        *ngIf="loaded"
         href="https://www.linkedin.com/in/caio-souza-silva/"
         target="_blank"
         rel="noreferrer"
@@ -57,7 +86,21 @@
       </a>
     </div>
 
-    <span class="footer__copy">{{
+    <ngx-skeleton-loader
+      [theme]="{
+        display: 'flex',
+        flexDirection: 'collum',
+        width: '240px',
+        borderRadius: '20px',
+        margin: '30px auto'
+      }"
+      count="1"
+      appearance="line"
+      [animation]="style == 'dark-mode' ? 'progress' : 'progress-dark'"
+      *ngIf="!loaded"
+    />
+
+    <span *ngIf="loaded" class="footer__copy">{{
       "@CaioSSilva. All rights reserved" | translate
     }}</span>
   </div>

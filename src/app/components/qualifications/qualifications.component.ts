@@ -41,7 +41,7 @@ export class QualificationsComponent {
   constructor() {
     setTimeout(() => {
       this.loaded = !this.loaded;
-    }, 400);
+    }, 1000);
   }
 
   filters = [

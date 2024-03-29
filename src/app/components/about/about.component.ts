@@ -34,7 +34,7 @@ export class AboutComponent {
   constructor() {
     setTimeout(() => {
       this.loaded = !this.loaded;
-    }, 400);
+    }, 1000);
   }
   Download() {
     this.opened = !this.opened;

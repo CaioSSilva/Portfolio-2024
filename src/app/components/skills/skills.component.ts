@@ -61,6 +61,6 @@ export class SkillsComponent {
   constructor() {
     setTimeout(() => {
       this.loaded = !this.loaded;
-    }, 400);
+    }, 1000);
   }
 }

@@ -1,13 +1,57 @@
 <section class="contact section" id="contact">
-  <h2 class="section__title">{{ "Contact" | translate }}</h2>
-  <span class="section__subtitle">{{ "Say hi" | translate }}</span>
+  <ngx-skeleton-loader
+    [theme]="{
+      display: 'flex',
+      flexDirection: 'column',
+      width: '120px',
+      borderRadius: '20px',
+      margin: '10px auto'
+    }"
+    count="2"
+    appearance="line"
+    [animation]="style == 'dark-mode' ? 'progress' : 'progress-dark'"
+    *ngIf="!loaded"
+  />
+  <h2 *ngIf="loaded" class="section__title">{{ "Contact" | translate }}</h2>
+  <span *ngIf="loaded" class="section__subtitle">{{
+    "Say hi" | translate
+  }}</span>
 
   <div class="contact__container container grid">
     <div class="contact__content">
-      <h3 class="contact__title">{{ "Talk to me" | translate }}</h3>
+      <ngx-skeleton-loader
+        [theme]="{
+          display: 'flex',
+          flexDirection: 'column',
+          width: '120px',
+          borderRadius: '20px',
+          margin: '10px auto'
+        }"
+        count="1"
+        appearance="line"
+        [animation]="style == 'dark-mode' ? 'progress' : 'progress-dark'"
+        *ngIf="!loaded"
+      />
+      <h3 *ngIf="loaded" class="contact__title">
+        {{ "Talk to me" | translate }}
+      </h3>
 
       <div class="contact__info">
-        <div class="contact__card">
+        <ngx-skeleton-loader
+          [theme]="{
+            display: 'flex',
+            flexDirection: 'column',
+            width: '250px',
+            height: '100px',
+            borderRadius: '20px',
+            margin: '10px auto'
+          }"
+          count="3"
+          appearance="line"
+          [animation]="style == 'dark-mode' ? 'progress' : 'progress-dark'"
+          *ngIf="!loaded"
+        />
+        <div *ngIf="loaded" class="contact__card">
           <fa-icon [icon]="discordIcon" class="contact__card-icon"></fa-icon>
 
           <h3 class="contact__card-title">Discord</h3>
@@ -25,7 +69,7 @@
           </a>
         </div>
 
-        <div class="contact__card">
+        <div *ngIf="loaded" class="contact__card">
           <fa-icon [icon]="whatsIcon" class="contact__card-icon"></fa-icon>
 
           <h3 class="contact__card-title">Whatsapp</h3>
@@ -42,17 +86,34 @@
           </a>
         </div>
 
-        <div class="contact__card">
+        <div *ngIf="loaded" class="contact__card">
           <fa-icon [icon]="envelopeIcon" class="contact__card-icon"></fa-icon>
 
           <h3 class="contact__card-title">Email</h3>
-          <span class="contact__card-data">caiosouzasilva13650&#64;gmail.com</span>
+          <span class="contact__card-data"
+            >caiosouzasilva13650&#64;gmail.com</span
+          >
         </div>
       </div>
     </div>
 
     <div class="contact__content">
-      <h3 class="contact__title">{{ "Write me your Message" | translate }}</h3>
+      <ngx-skeleton-loader
+        [theme]="{
+          display: 'flex',
+          flexDirection: 'column',
+          width: '250px',
+          borderRadius: '20px',
+          margin: '10px auto'
+        }"
+        count="1"
+        appearance="line"
+        [animation]="style == 'dark-mode' ? 'progress' : 'progress-dark'"
+        *ngIf="!loaded"
+      />
+      <h3 *ngIf="loaded" class="contact__title">
+        {{ "Write me your Message" | translate }}
+      </h3>
 
       <form
         method="POST"
@@ -61,7 +122,22 @@
       >
         <input type="hidden" name="_next" value="https://caiossilva.com/" />
 
-        <div class="contact__form-div">
+        <ngx-skeleton-loader
+          [theme]="{
+            display: 'flex',
+            flexDirection: 'column',
+            width: '300px',
+            height: '80px',
+            borderRadius: '20px',
+            margin: '10px auto'
+          }"
+          count="2"
+          appearance="line"
+          [animation]="style == 'dark-mode' ? 'progress' : 'progress-dark'"
+          *ngIf="!loaded"
+        />
+
+        <div *ngIf="loaded" class="contact__form-div">
           <label for="name" class="contact__form-tag">{{
             "Name" | translate
           }}</label>
@@ -76,7 +152,7 @@
           />
         </div>
 
-        <div class="contact__form-div">
+        <div *ngIf="loaded" class="contact__form-div">
           <label for="email" class="contact__form-tag">{{
             "Your Email" | translate
           }}</label>
@@ -91,7 +167,22 @@
           />
         </div>
 
-        <div class="contact__form-div contact__form-area">
+        <ngx-skeleton-loader
+          [theme]="{
+            display: 'flex',
+            flexDirection: 'column',
+            width: '300px',
+            height: '200px',
+            borderRadius: '20px',
+            margin: '10px auto'
+          }"
+          count="1"
+          appearance="line"
+          [animation]="style == 'dark-mode' ? 'progress' : 'progress-dark'"
+          *ngIf="!loaded"
+        />
+
+        <div *ngIf="loaded" class="contact__form-div contact__form-area">
           <label for="message" class="contact__form-tag">{{
             "Message" | translate
           }}</label>
@@ -105,7 +196,19 @@
             class="contact__form-input"
           ></textarea>
         </div>
-        <button type="submit" class="button button--flex">
+
+        <ngx-skeleton-loader
+          *ngIf="!loaded"
+          count="1"
+          [animation]="style == 'dark-mode' ? 'progress' : 'progress-dark'"
+          [theme]="{
+            borderRadius: '20px',
+            width: '180px',
+            height: '70px',
+            marginLeft: '35px'
+          }"
+        />
+        <button *ngIf="loaded" type="submit" class="button button--flex">
           {{ "Send" | translate }}
 
           <fa-icon [icon]="paperplaneIcon" class="send__icon"></fa-icon>

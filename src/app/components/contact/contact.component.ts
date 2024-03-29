@@ -8,11 +8,17 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TranslateModule } from '@ngx-translate/core';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FontAwesomeModule, TranslateModule],
+  imports: [
+    CommonModule,
+    FontAwesomeModule,
+    NgxSkeletonLoaderModule,
+    TranslateModule,
+  ],
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css'],
 })
@@ -22,4 +28,12 @@ export class ContactComponent {
   whatsIcon = faWhatsapp;
   envelopeIcon = faEnvelope;
   paperplaneIcon = faPaperPlane;
+  loaded = false;
+  style = <string>document.querySelector(':root')?.classList[0];
+
+  constructor() {
+    setTimeout(() => {
+      this.loaded = !this.loaded;
+    }, 1000);
+  }
 }

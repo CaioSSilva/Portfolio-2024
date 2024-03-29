@@ -28,7 +28,7 @@ export class ColorComponent {
   constructor() {
     setTimeout(() => {
       this.loaded = !this.loaded;
-    }, 400);
+    }, 1000);
 
     if (localStorage.getItem('theme')) {
       this.setTheme(<string>localStorage.getItem('theme'));
