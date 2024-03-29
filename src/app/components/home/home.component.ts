@@ -33,10 +33,4 @@ export class HomeComponent {
   arrowdownIcon = faArrowDown;
   loaded = false;
   style = <string>document.querySelector(':root')?.classList[0];
-
-  constructor() {
-    setTimeout(() => {
-      this.loaded = !this.loaded;
-    }, 1000);
-  }
 }

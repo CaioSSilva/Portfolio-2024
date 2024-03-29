@@ -13,7 +13,7 @@ import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 })
 export class ColorComponent {
   menuOpened: boolean = false;
-  loaded: boolean = false;
+  loaded: boolean = true;
   style = document.querySelector(':root')?.classList[0];
   icon = faPaintBrush;
   root = <DOMTokenList>document.querySelector(':root')?.classList;
@@ -26,10 +26,6 @@ export class ColorComponent {
   );
 
   constructor() {
-    setTimeout(() => {
-      this.loaded = !this.loaded;
-    }, 1000);
-
     if (localStorage.getItem('theme')) {
       this.setTheme(<string>localStorage.getItem('theme'));
     } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {

@@ -29,10 +29,4 @@ export class FooterComponent {
   twitterIcon = faXTwitter;
   loaded = false;
   style = <string>document.querySelector(':root')?.classList[0];
-
-  constructor() {
-    setTimeout(() => {
-      this.loaded = !this.loaded;
-    }, 1000);
-  }
 }

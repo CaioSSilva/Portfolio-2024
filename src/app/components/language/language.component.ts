@@ -29,12 +29,6 @@ export class LanguageComponent {
     { name: 'Portuguese', value: 'pt', flag: '../../../assets/br-icon.webp' },
   ];
 
-  constructor() {
-    setTimeout(() => {
-      this.loaded = !this.loaded;
-    }, 1000);
-  }
-
   changeLang(lang: string) {
     this.langChangeEvent.emit(lang);
   }

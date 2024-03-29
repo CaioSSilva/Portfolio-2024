@@ -30,10 +30,4 @@ export class ContactComponent {
   paperplaneIcon = faPaperPlane;
   loaded = false;
   style = <string>document.querySelector(':root')?.classList[0];
-
-  constructor() {
-    setTimeout(() => {
-      this.loaded = !this.loaded;
-    }, 1000);
-  }
 }

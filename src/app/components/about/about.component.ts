@@ -31,11 +31,6 @@ export class AboutComponent {
   loaded = false;
   style = <string>document.querySelector(':root')?.classList[0];
 
-  constructor() {
-    setTimeout(() => {
-      this.loaded = !this.loaded;
-    }, 1000);
-  }
   Download() {
     this.opened = !this.opened;
   }

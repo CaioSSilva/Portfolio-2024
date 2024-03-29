@@ -44,12 +44,6 @@ export class HeaderComponent {
   style = <string>document.querySelector(':root')?.classList[0];
   loaded = false;
 
-  constructor() {
-    setTimeout(() => {
-      this.loaded = !this.loaded;
-    }, 1000);
-  }
-
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
     this.progress();
