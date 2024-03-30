@@ -1,33 +1,9 @@
 <section class="qualification section" id="qualifications">
-  <ngx-skeleton-loader
-    count="2"
-    *ngIf="!loaded"
-    [theme]="{
-      display: 'flex',
-      flexDirection: 'collum',
-      borderRadius: '20px',
-      width: '200px',
-      margin: '10px auto'
-    }"
-  />
-  <h2 *ngIf="loaded" class="section__title">
-    {{ "Qualifications" | translate }}
-  </h2>
-  <span *ngIf="loaded" class="section__subtitle">{{
-    "My personal Journey" | translate
-  }}</span>
+  <h2 class="section__title">{{ "Qualifications" | translate }}</h2>
+  <span class="section__subtitle">{{ "My personal Journey" | translate }}</span>
   <div class="qualification__container container grid">
     <div class="qualification__tabs">
-      <ngx-skeleton-loader
-        count="1"
-        *ngIf="!loaded"
-        [theme]="{
-          width: '250px',
-          marginTop: '30px'
-        }"
-      />
       <div
-        *ngIf="loaded"
         class="qualification__selection qualification__active button--flex"
         (click)="setTab(0)"
       >
@@ -35,7 +11,6 @@
         {{ "Certifications" | translate }}
       </div>
       <div
-        *ngIf="loaded"
         class="qualification__selection qualification__active button--flex"
         (click)="setTab(1)"
       >
@@ -43,17 +18,8 @@
         {{ "Experience" | translate }}
       </div>
     </div>
-    <ngx-skeleton-loader
-      count="1"
-      *ngIf="!loaded"
-      [theme]="{
-      height: '350px',
-      borderRadius:'20px',
-      margin: '0 auto',
-    }"
-    />
-    <div *ngIf="loaded" class="qualification__content">
-      <div *ngIf="tab === 0" class="certifications">
+    <div class="qualification__content">
+      <div class="certifications" *ngIf="tab === 0">
         <div class="qualification__labels">
           <h2 class="certification__name">{{ "Name" | translate }}</h2>
           <h2 class="certification__date">{{ "Date" | translate }}</h2>

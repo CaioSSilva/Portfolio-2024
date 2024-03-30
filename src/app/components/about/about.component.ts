@@ -1,6 +1,5 @@
-import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 import { PlayingnowComponent } from './../playingnow/playingnow.component';
-import { AfterContentInit, AfterViewInit, Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   faAward,
@@ -18,22 +17,15 @@ import { TranslateModule } from '@ngx-translate/core';
     PlayingnowComponent,
     FontAwesomeModule,
     TranslateModule,
-    NgxSkeletonLoaderModule,
   ],
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css'],
 })
-export class AboutComponent implements AfterContentInit {
+export class AboutComponent {
   opened: boolean = false;
   awardIcon = faAward;
   briefcaseIcon = faBriefcase;
   filecontractIcon = faFileContract;
-  loaded = false;
-  style = <string>document.querySelector(':root')?.classList[0];
-
-  ngAfterContentInit() {
-    this.loaded = !this.loaded;
-  }
 
   Download() {
     this.opened = !this.opened;

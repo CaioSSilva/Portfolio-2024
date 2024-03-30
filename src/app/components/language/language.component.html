@@ -1,15 +1,4 @@
-<ngx-skeleton-loader
-  [theme]="{
-    width: '35px',
-    height: '35px',
-    position: 'fixed',
-    left: '1.5rem',
-    bottom: '3rem'
-  }"
-  [animation]="style == 'dark-mode' ? 'progress' : 'progress-dark'"
-  *ngIf="!loaded"
-/>
-<div *ngIf="loaded" class="language" (click)="menuOpen = !menuOpen">
+<div class="language" (click)="menuOpen = !menuOpen">
   <fa-icon [icon]="faGlobe" class="language__icon"></fa-icon>
 </div>
 

@@ -1,5 +1,6 @@
-import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
-import { AfterContentInit, AfterViewInit, Component } from '@angular/core';
+import {
+  Component,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
@@ -14,26 +15,15 @@ import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [
-    CommonModule,
-    FontAwesomeModule,
-    TranslateModule,
-    ColorComponent,
-    NgxSkeletonLoaderModule,
-  ],
+  imports: [CommonModule, FontAwesomeModule, TranslateModule, ColorComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent implements AfterContentInit {
-  ngAfterContentInit() {
-    this.loaded = !this.loaded;
-  }
+export class HomeComponent {
   instaIcon = faInstagram;
   githubIcon = faGithub;
   linkedinIcon = faLinkedin;
   twitterIcon = faXTwitter;
   paperplaneIcon = faPaperPlane;
   arrowdownIcon = faArrowDown;
-  loaded = false;
-  style = <string>document.querySelector(':root')?.classList[0];
 }

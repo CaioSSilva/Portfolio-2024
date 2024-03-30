@@ -1,38 +1,21 @@
-import {
-  AfterContentInit,
-  Component,
-  EventEmitter,
-  Output,
-} from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TranslateModule } from '@ngx-translate/core';
-import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 @Component({
   selector: 'app-language',
   standalone: true,
-  imports: [
-    CommonModule,
-    NgxSkeletonLoaderModule,
-    FontAwesomeModule,
-    TranslateModule,
-  ],
+  imports: [CommonModule, FontAwesomeModule, TranslateModule],
   templateUrl: './language.component.html',
   styleUrls: ['./language.component.css'],
 })
-export class LanguageComponent implements AfterContentInit {
-  ngAfterContentInit() {
-    this.loaded = !this.loaded;
-  }
-
+export class LanguageComponent {
   @Output() langChangeEvent = new EventEmitter<string>();
 
   faGlobe = faGlobe;
   menuOpen = false;
-  loaded = false;
-  style = <string>document.querySelector(':root')?.classList[0];
   languages = [
     { name: 'English', value: 'en', flag: '../../../assets/en-icon.webp' },
     { name: 'Portuguese', value: 'pt', flag: '../../../assets/br-icon.webp' },

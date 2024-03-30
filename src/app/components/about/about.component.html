@@ -1,38 +1,10 @@
 <section class="about section" id="about">
-  <ngx-skeleton-loader
-    [theme]="{
-      display: 'flex',
-      flexDirection: 'column',
-      width: '120px',
-      borderRadius: '20px',
-      margin: '10px auto'
-    }"
-    count="2"
-    appearance="line"
-    [animation]="style == 'dark-mode' ? 'progress' : 'progress-dark'"
-    *ngIf="!loaded"
-  />
-  <h2 *ngIf="loaded" class="section__title">{{ "About Me" | translate }}</h2>
-  <span *ngIf="loaded" class="section__subtitle">{{
-    "My introduction" | translate
-  }}</span>
+  <h2 class="section__title">{{ "About Me" | translate }}</h2>
+  <span class="section__subtitle">{{ "My introduction" | translate }}</span>
 
   <div class="about__container container grid">
     <div class="about__imgs">
-      <ngx-skeleton-loader
-        [theme]="{
-          width: '200px',
-          height: '200px',
-          borderRadius: '20px',
-          marginTop: '3rem'
-        }"
-        count="1"
-        appearance="line"
-        [animation]="style == 'dark-mode' ? 'progress' : 'progress-dark'"
-        *ngIf="!loaded"
-      />
       <img
-        *ngIf="loaded"
         fetchpriority="high"
         alt="me-art-draw"
         title="me-art"
@@ -44,35 +16,18 @@
 
     <div class="about__data">
       <div class="about__info grid">
-        <ngx-skeleton-loader
-          [theme]="{ width: '350px', height: '90px', borderRadius: '20px' }"
-          count="1"
-          appearance="line"
-          [animation]="style == 'dark-mode' ? 'progress' : 'progress-dark'"
-          *ngIf="!loaded"
-        />
-        <a *ngIf="loaded" class="about__box" href="#skills">
+        <a class="about__box" href="#skills">
           <fa-icon [icon]="awardIcon"></fa-icon>
           <h2 class="about__title">{{ "Experience" | translate }}</h2>
           <span class="about__subtitle">{{ "4 Years Study" | translate }}</span>
         </a>
-        <a *ngIf="loaded" class="about__box" href="#portfolio">
+        <a class="about__box" href="#portfolio">
           <fa-icon [icon]="briefcaseIcon"></fa-icon>
           <h2 class="about__title">{{ "Completed" | translate }}</h2>
           <span class="about__subtitle">{{ "13 + Projects" | translate }}</span>
         </a>
       </div>
-      <ngx-skeleton-loader
-        [theme]="{
-          borderRadius: '20px',
-          maxWidth: '600px'
-        }"
-        count="1"
-        appearance="line"
-        [animation]="style == 'dark-mode' ? 'progress' : 'progress-dark'"
-        *ngIf="!loaded"
-      />
-      <p *ngIf="loaded" class="about__description">
+      <p class="about__description">
         {{
           "My name is Caio Souza, I'm 19 years old and I've been a frontend developer for 4 years"
             | translate
@@ -80,23 +35,7 @@
       </p>
 
       <div>
-        <ngx-skeleton-loader
-          [theme]="{
-            width: '180px',
-            borderRadius: '20px',
-            height: '70px',
-            marginTop: '3rem'
-          }"
-          count="1"
-          appearance="line"
-          [animation]="style == 'dark-mode' ? 'progress' : 'progress-dark'"
-          *ngIf="!loaded"
-        />
-        <div
-          *ngIf="loaded"
-          class="button button--flex pointer"
-          (click)="Download()"
-        >
+        <div class="button button--flex pointer" (click)="Download()">
           {{ "Resume" | translate }}
           <fa-icon [icon]="filecontractIcon" class="file"></fa-icon>
         </div>

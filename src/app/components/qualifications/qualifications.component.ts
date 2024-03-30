@@ -1,4 +1,4 @@
-import { AfterContentInit, Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   faBriefcase,
@@ -11,20 +11,14 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import qualifications from './qualifications';
 import { IQualification } from 'src/app/interfaces/IQualification';
 import { TranslateModule } from '@ngx-translate/core';
-import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 @Component({
   selector: 'app-qualifications',
   standalone: true,
-  imports: [
-    CommonModule,
-    NgxSkeletonLoaderModule,
-    FontAwesomeModule,
-    TranslateModule,
-  ],
+  imports: [CommonModule, FontAwesomeModule, TranslateModule],
   templateUrl: './qualifications.component.html',
   styleUrls: ['./qualifications.component.css'],
 })
-export class QualificationsComponent implements AfterContentInit {
+export class QualificationsComponent {
   filterIcon = faFilter;
   calendarIcon = faCalendar;
   certificationIcon = faFilePdf;
@@ -35,13 +29,6 @@ export class QualificationsComponent implements AfterContentInit {
   aux = qualifications;
   filtered: boolean = false;
   tab = 0;
-  loaded = false;
-  style = <string>document.querySelector(':root')?.classList[0];
-
-  ngAfterContentInit() {
-    this.loaded = !this.loaded;
-  }
-
   filters = [
     {
       name: <IQualification['type']>'Frontend',

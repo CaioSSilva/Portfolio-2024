@@ -1,11 +1,5 @@
 <div class="color__container">
-  <ngx-skeleton-loader
-    [theme]="{ height: '40px', borderRadius: '20px', width: '40px' }"
-    [animation]="style == 'dark-mode' ? 'progress' : 'progress-dark'"
-    *ngIf="!loaded"
-    appearance="circle"
-  ></ngx-skeleton-loader>
-  <div *ngIf="loaded" class="toggler" (click)="openMenu()">
+  <div class="toggler" (click)="openMenu()">
     <fa-icon [icon]="icon" class="color__icon"></fa-icon>
   </div>
   <div class="selectors" [ngStyle]="{ opacity: menuOpened ? '1' : '0' }">

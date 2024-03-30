@@ -1,19 +1,7 @@
-<ngx-skeleton-loader
-  [theme]="{
-    width: '350px',
-    borderRadius: '20px',
-    height: '90px',
-    marginTop: '3rem'
-  }"
-  count="1"
-  appearance="line"
-  [animation]="style == 'dark-mode' ? 'progress' : 'progress-dark'"
-  *ngIf="!loaded"
-/>
 <a
   href="https://www.last.fm/pt/user/CaioSSilva"
   target="_blank"
-  *ngIf="loaded"
+  *ngIf="music.recenttracks.track[0].name != ''"
   class="playing__container"
 >
   <img
