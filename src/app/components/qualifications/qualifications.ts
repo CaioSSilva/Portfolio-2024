@@ -1,6 +1,12 @@
 import { IQualification } from './../../interfaces/IQualification';
 
 const qualifications: IQualification[] = [
+    {
+    name: 'Salesforce AI Associate',
+    date: '31/03/24',
+    type: 'Other',
+    link: 'https://drive.google.com/file/d/1VoqOSfgYACmTUvEBI49RZYNc0rNk9ptR/view?usp=drive_link',
+  },
   {
     name: 'Santander Fullstack',
     date: '11/08/23',
