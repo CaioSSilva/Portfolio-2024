@@ -2,7 +2,7 @@
   <div class="toggler" (click)="openMenu()">
     <fa-icon [icon]="icon" class="color__icon"></fa-icon>
   </div>
-  <div class="selectors" [ngStyle]="{ opacity: menuOpened ? '1' : '0' }">
+  <div class="selectors" [ngStyle]="{ display: menuOpened ? 'flex' : 'none' }">
     <div
       class="selector white"
       (click)="setTheme('white__mode')"
