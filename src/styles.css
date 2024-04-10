@@ -1,7 +1,7 @@
 /*=============== GOOGLE FONTS ===============*/
 @font-face {
-  font-family: "Outfit";
-  src: url("./assets/fonts/Outfit.ttf");
+  font-family: "Poppins";
+  src: url("./assets/fonts/Poppins-Regular.ttf");
 }
 
 /*=============== VARIABLES CSS ===============*/
@@ -9,7 +9,7 @@
   --header-height: 3rem;
 
   /*========== Font and typography ==========*/
-  --body-font: "Outfit", sans-serif;
+  --body-font: "Poppins", sans-serif;
 
   /*.5rem = 8px | 1rem = 16px ...*/
   --big-font-size: 3.5rem;
