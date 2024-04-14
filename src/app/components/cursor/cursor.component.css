@@ -10,7 +10,7 @@
   opacity: 0;
 }
 
-@media screen and (max-width: 350px) {
+@media (pointer: coarse) {
   .ball {
     display: none;
   }
