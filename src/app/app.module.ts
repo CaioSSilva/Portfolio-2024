@@ -16,6 +16,7 @@ import { LanguageComponent } from './components/language/language.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient } from '@angular/common/http';
+import { CursorComponent } from './components/cursor/cursor.component';
 
 @NgModule({
   declarations: [AppComponent],
@@ -42,6 +43,7 @@ import { HttpClient } from '@angular/common/http';
     ContactComponent,
     FooterComponent,
     LanguageComponent,
+    CursorComponent,
   ],
 })
 export class AppModule {}
