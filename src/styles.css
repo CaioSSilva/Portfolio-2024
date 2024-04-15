@@ -68,6 +68,11 @@
   box-sizing: border-box;
 }
 
+.color__container:hover ~ #ball {
+  width: 15px;
+  height: 15px;
+}
+
 html {
   scroll-behavior: smooth;
 }

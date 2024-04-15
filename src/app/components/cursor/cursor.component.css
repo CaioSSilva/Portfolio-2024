@@ -1,13 +1,19 @@
-.ball {
-  width: 10px;
-  height: 10px;
+#ball {
+  width: 20px;
+  height: 20px;
   position: fixed;
+  transition: none;
   top: 0;
   left: 0;
   border: 2px solid var(--title-color);
   border-radius: 50%;
   z-index: 1000;
   opacity: 0;
+}
+
+.ballClick {
+  width: 5px !important;
+  height: 5px !important;
 }
 
 @media (pointer: coarse) {
