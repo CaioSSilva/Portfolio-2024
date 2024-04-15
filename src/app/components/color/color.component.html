@@ -1,22 +1,5 @@
 <div class="color__container">
-  <div class="toggler" (click)="openMenu()">
+  <div class="toggler" (click)="setTheme(handleClick())">
     <fa-icon [icon]="icon" class="color__icon"></fa-icon>
-  </div>
-  <div class="selectors" [ngStyle]="{ display: menuOpened ? 'flex' : 'none' }">
-    <div
-      class="selector white"
-      (click)="setTheme('white__mode')"
-      (click)="openMenu()"
-    ></div>
-    <div
-      class="selector dark"
-      (click)="setTheme('dark__mode')"
-      (click)="openMenu()"
-    ></div>
-    <div
-      class="selector blue"
-      (click)="setTheme('blue__mode')"
-      (click)="openMenu()"
-    ></div>
   </div>
 </div>

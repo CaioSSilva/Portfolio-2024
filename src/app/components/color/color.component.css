@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  user-select: none;
   background: var(--title-color);
   margin: 0px 5px 0px 5px;
   width: 42px;
@@ -15,37 +16,4 @@
 }
 .toggler:hover {
   background: var(--title-color-dark);
-}
-.selectors {
-  display: flex;
-  min-height: 80px;
-  border-radius: 0.8rem;
-  border: 1px solid var(--border-color);
-  margin: 10px 5px 0px 5px;
-  padding: 3px;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  background-color: var(--title-color);
-}
-.selector {
-  content: " ";
-  width: 30px;
-  margin: 2px;
-  height: 30px;
-  border-radius: 1rem;
-  border: 1px solid var(--border-color);
-  cursor: pointer;
-}
-.white {
-  background-color: #fff;
-}
-.dark {
-  background-color: #414141;
-}
-.blue {
-  background-color: #2e4d6e;
-}
-.active {
-  display: none;
 }
