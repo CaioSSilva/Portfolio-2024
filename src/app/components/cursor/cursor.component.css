@@ -17,7 +17,7 @@
 }
 
 @media (pointer: coarse) {
-  .ball {
+  #ball {
     display: none;
   }
 }
