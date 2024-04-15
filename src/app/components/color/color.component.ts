@@ -36,13 +36,13 @@ export class ColorComponent {
     switch (this.themes) {
       case 1:
         this.themes++;
-        return 'white__mode';
+        return 'blue__mode';
       case 2:
         this.themes++;
         return 'dark__mode';
       case 3:
         this.themes = 1;
-        return 'blue__mode';
+        return 'white__mode';
     }
     return 'white__mode';
   }
