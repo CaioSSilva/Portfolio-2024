@@ -11,7 +11,7 @@ import { faPaintBrush } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./color.component.css'],
 })
 export class ColorComponent {
-  themes = 1;
+  menuOpened: boolean = false;
   icon = faPaintBrush;
   root = <DOMTokenList>document.querySelector(':root')?.classList;
   white = document.querySelector('white');
@@ -32,26 +32,14 @@ export class ColorComponent {
     }
   }
 
-  handleClick(): string {
-    switch (this.themes) {
-      case 1:
-        this.themes++;
-        return 'blue__mode';
-      case 2:
-        this.themes++;
-        return 'dark__mode';
-      case 3:
-        this.themes = 1;
-        return 'white__mode';
-    }
-    return 'white__mode';
-  }
-
   setTheme(theme: string) {
     localStorage.setItem('theme', theme);
     document.querySelector(':root')?.removeAttribute('class');
     this.root.add(<string>localStorage.getItem('theme'));
     this.setFavicon(`'../../../assets/${theme}.ico`);
+  }
+  openMenu() {
+    this.menuOpened = !this.menuOpened;
   }
 
   setFavicon(favImg: string) {
