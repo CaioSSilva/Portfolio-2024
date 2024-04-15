@@ -33,16 +33,20 @@ export class ColorComponent {
   }
 
   handleClick(): string {
-    if (this.themes == 3) {
-      this.themes = 1;
-      return 'white__mode';
-    } else {
-      this.themes++;
-      if (this.themes == 2) return 'dark__mode';
-      if (this.themes == 3) return 'blue__mode';
-      return 'white__mode';
+    switch (this.themes) {
+      case 1:
+        this.themes++;
+        return 'white__mode';
+      case 2:
+        this.themes++;
+        return 'dark__mode';
+      case 3:
+        this.themes = 1;
+        return 'blue__mode';
     }
+    return 'white__mode';
   }
+
   setTheme(theme: string) {
     localStorage.setItem('theme', theme);
     document.querySelector(':root')?.removeAttribute('class');
