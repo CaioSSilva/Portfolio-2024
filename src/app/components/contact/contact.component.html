@@ -3,7 +3,7 @@
   <span class="section__subtitle">{{ "Say hi" | translate }}</span>
 
   <div class="contact__container container grid">
-    <div class="contact__content">
+    <div class="contact__content" #contactLeft>
       <h3 class="contact__title">{{ "Talk to me" | translate }}</h3>
 
       <div class="contact__info">
@@ -46,7 +46,9 @@
           <fa-icon [icon]="envelopeIcon" class="contact__card-icon"></fa-icon>
 
           <h3 class="contact__card-title">Email</h3>
-          <span class="contact__card-data">caiosouzasilva13650&#64;gmail.com</span>
+          <span class="contact__card-data"
+            >caiosouzasilva13650&#64;gmail.com</span
+          >
         </div>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { faDiscord, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import {
@@ -8,6 +8,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TranslateModule } from '@ngx-translate/core';
+import gsap from 'gsap';
 
 @Component({
   selector: 'app-contact',
@@ -16,10 +17,20 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css'],
 })
-export class ContactComponent {
+export class ContactComponent implements AfterViewInit {
   discordIcon = faDiscord;
   rightIcon = faArrowRight;
   whatsIcon = faWhatsapp;
   envelopeIcon = faEnvelope;
   paperplaneIcon = faPaperPlane;
+
+  @ViewChild('contactLeft') contactLeft!: ElementRef<HTMLDivElement>;
+
+  ngAfterViewInit() {
+    gsap.fromTo(
+      this.contactLeft.nativeElement,
+      { y: 100 },
+      { y: 0, duration: 1 }
+    );
+  }
 }

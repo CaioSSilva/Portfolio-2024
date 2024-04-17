@@ -19,7 +19,7 @@ export class PortfolioComponent {
 
   constructor(github: GithubService) {
     github.GetWorks().subscribe((res) => {
-      this.repos = res;
+      //this.repos = res;
     });
   }
 }

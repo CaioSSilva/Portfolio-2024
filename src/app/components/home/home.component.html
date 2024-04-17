@@ -1,7 +1,7 @@
 <section class="home section" id="home">
   <div class="home__container container grid">
     <div class="home__content grid">
-      <div class="home__social">
+      <div class="home__social" #homeSocial>
         <a
           href="https://www.instagram.com/caios_silvaa/"
           target="_blank"
@@ -39,7 +39,7 @@
           <fa-icon [icon]="linkedinIcon"></fa-icon>
         </a>
       </div>
-      <div class="home__img">
+      <div class="home__img" #homeImg>
         <app-color></app-color>
         <img
           fetchpriority="high"
@@ -48,7 +48,7 @@
           title="me-photo"
         />
       </div>
-      <div class="home__data">
+      <div class="home__data" #homeData>
         <h1 class="home__title">Caio Souza</h1>
 
         <h2 class="home__subtitle">{{ "Web Developer" | translate }}</h2>
@@ -69,7 +69,7 @@
       </div>
     </div>
 
-    <div class="home__scroll">
+    <div class="home__scroll" #mouseDown>
       <a href="#about" class="home__scroll-button button--flex">
         <div class="mouse">
           <div class="scroll"></div>

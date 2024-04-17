@@ -1,6 +1,8 @@
 <section class="about section" id="about">
-  <h2 class="section__title">{{ "About Me" | translate }}</h2>
-  <span class="section__subtitle">{{ "My introduction" | translate }}</span>
+  <h2 class="section__title" #aboutTitle>{{ "About Me" | translate }}</h2>
+  <span class="section__subtitle" #aboutsubTitle>{{
+    "My introduction" | translate
+  }}</span>
 
   <div class="about__container container grid">
     <div class="about__imgs">
@@ -10,11 +12,12 @@
         title="me-art"
         src="../../../assets/about.webp"
         class="about__img"
+        #avatar
       />
       <app-playingnow></app-playingnow>
     </div>
 
-    <div class="about__data">
+    <div class="about__data" #abtData>
       <div class="about__info grid">
         <a class="about__box" href="#skills">
           <fa-icon [icon]="awardIcon"></fa-icon>

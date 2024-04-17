@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
   faBriefcase,
@@ -11,6 +11,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import qualifications from './qualifications';
 import { IQualification } from 'src/app/interfaces/IQualification';
 import { TranslateModule } from '@ngx-translate/core';
+import gsap from 'gsap';
 @Component({
   selector: 'app-qualifications',
   standalone: true,
@@ -18,7 +19,7 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './qualifications.component.html',
   styleUrls: ['./qualifications.component.css'],
 })
-export class QualificationsComponent {
+export class QualificationsComponent implements AfterViewInit {
   filterIcon = faFilter;
   calendarIcon = faCalendar;
   certificationIcon = faFilePdf;
@@ -72,5 +73,14 @@ export class QualificationsComponent {
         (certification) => certification.type == name
       );
     }
+  }
+
+  @ViewChild('qualificationsEl') qualificationsEl!: ElementRef<HTMLDivElement>;
+  ngAfterViewInit() {
+    gsap.fromTo(
+      this.qualificationsEl.nativeElement,
+      { y: 100 },
+      { y: 0, duration: 1 }
+    );
   }
 }
