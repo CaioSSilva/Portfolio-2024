@@ -2,7 +2,6 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
-  faBluesky,
   faGithub,
   faInstagram,
   faLinkedin,
@@ -24,7 +23,6 @@ export class HomeComponent implements AfterViewInit {
   githubIcon = faGithub;
   linkedinIcon = faLinkedin;
   twitterIcon = faXTwitter;
-  blueSkyIcon = faBluesky;
   paperplaneIcon = faPaperPlane;
   arrowdownIcon = faArrowDown;
 
