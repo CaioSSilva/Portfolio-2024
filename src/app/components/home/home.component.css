@@ -23,6 +23,9 @@
   color: #7140c9;
 }
 .twitter_icon:hover {
+  color: #4db2ff;
+}
+.bluesky_icon:hover {
   color: #4191ce;
 }
 .linkedin_icon:hover {
