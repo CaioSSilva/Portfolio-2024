@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {
+  faBluesky,
   faGithub,
   faInstagram,
   faLinkedin,
@@ -21,4 +22,5 @@ export class FooterComponent {
   githubIcon = faGithub;
   linkedinIcon = faLinkedin;
   twitterIcon = faXTwitter;
+  blueSkyIcon = faBluesky;
 }

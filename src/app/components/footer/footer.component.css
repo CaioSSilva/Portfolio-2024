@@ -45,6 +45,10 @@
 .footer__social-link:hover .github_icon {
   color: #7140c9;
 }
+
+.footer__social-link:hover .bluesky_icon {
+  color: #4191ce;
+}
 .footer__social-link:hover .twitter_icon {
   color: #4191ce;
 }
