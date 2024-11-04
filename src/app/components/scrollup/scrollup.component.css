@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  right: 1.5rem;
+  right: 0.8rem;
   bottom: -20%;
   background-color: var(--title-color);
   padding: 0.5rem;
@@ -21,13 +21,12 @@
   background-color: var(--title-color-dark);
 }
 .show__scroll {
-  bottom: 3rem;
+  bottom: 1rem;
 }
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
 @media screen and (max-width: 992px) {
   .scrollup {
-    right: 1.5rem;
     padding: 0.5rem;
   }
 }

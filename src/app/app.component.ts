@@ -7,6 +7,12 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
+  isThreeDimesional = false;
+
+  changeDimension($event: boolean) {
+    this.isThreeDimesional = $event.valueOf();
+  }
+
   title = 'Caio Souza Silva - Portfolio';
 
   constructor(private translate: TranslateService) {
