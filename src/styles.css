@@ -132,6 +132,7 @@ label {
 }
 #scene-container {
   cursor: default !important;
+  overflow: hidden;
 }
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section {
