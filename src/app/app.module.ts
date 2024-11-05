@@ -6,10 +6,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { ScrollupComponent } from './components/scrollup/scrollup.component';
 import { AboutComponent } from './components/about/about.component';
-import {
-  provideHttpClient,
-  withInterceptorsFromDi,
-} from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { SkillsComponent } from './components/skills/skills.component';
 import { QualificationsComponent } from './components/qualifications/qualifications.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
