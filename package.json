@@ -26,12 +26,11 @@
     "@ngx-translate/core": "^15.0.0",
     "@ngx-translate/http-loader": "^8.0.0",
     "@npmcli/package-json": "^6.0.1",
-    "angular-three": "^2.7.0",
     "gsap": "^3.12.5",
     "lru-cache": "^11.0.2",
     "ngxtension": "^4.0.0",
     "rxjs": "~7.8.0",
-    "three": "^0.169.0",
+    "three": "^0.170.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
   },
