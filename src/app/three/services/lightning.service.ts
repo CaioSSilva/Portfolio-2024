@@ -18,8 +18,8 @@ export class LightingService {
     directionalLight.castShadow = true; // Configura para lançar sombras
 
     // Configuração de sombras da luz direcional
-    directionalLight.shadow.mapSize.width = 4096;
-    directionalLight.shadow.mapSize.height = 4096;
+    directionalLight.shadow.mapSize.width = 8192;
+    directionalLight.shadow.mapSize.height = 8192;
     directionalLight.shadow.camera.near = 1;
     directionalLight.shadow.camera.far = 20;
     directionalLight.shadow.camera.left = -10;

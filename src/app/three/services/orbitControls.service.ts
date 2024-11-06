@@ -21,8 +21,15 @@ export class OrbitControlsService {
     );
 
     // Ajuste inicial para o controle
-    this.controls.enableDamping = true; // Para suavizar o movimento
+    this.controls.enableDamping = true;
+    this.controls.enablePan = false;
     this.controls.dampingFactor = 0.1;
+
+    this.controls.maxPolarAngle = Math.PI / 2.5;
+
+    // Limitar a distância de zoom
+    this.controls.minDistance = 3;
+    this.controls.maxDistance = 20;
   }
 
   // Método para atualizar os controles a cada frame

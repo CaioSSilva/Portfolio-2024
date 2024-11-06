@@ -1,3 +1,4 @@
+import { LoadingService } from './../services/loading.service';
 import {
   Component,
   ElementRef,
@@ -13,6 +14,7 @@ import { CommonModule } from '@angular/common';
 import { LoadingComponent } from '../loading/loading.component';
 import { GroundService } from '../services/ground.service';
 import { LightingService } from '../services/lightning.service';
+import { LoaderService } from '../services/loader.service';
 
 @Component({
   selector: 'app-scene',
@@ -36,13 +38,20 @@ export class SceneComponent implements OnInit {
     private cameraService: CameraService,
     private rendererService: RendererService,
     private animateService: AnimateService,
-    private groundService: GroundService, // Injeta o GroundService
-    private lightingService: LightingService //
+    private groundService: GroundService,
+    private lightingService: LightingService,
+    private loaderService: LoaderService,
+    private loadingService: LoadingService
   ) {}
 
   ngOnInit() {
     this.rendererService.appendRendererToElement(this.rendererContainer);
     this.animateService.animate();
+
+    this.loadingService.loadingProgress$.subscribe((progress) => {
+      console.log('Progress: ', progress);
+      this.loadingProgress = progress;
+    });
   }
 
   @HostListener('window:resize')
