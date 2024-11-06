@@ -1,7 +1,7 @@
 // src/app/three/orbit-controls.service.ts
 import { Injectable } from '@angular/core';
 import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { CameraService } from './camera.service';
 import { RendererService } from './renderer.service';
 
