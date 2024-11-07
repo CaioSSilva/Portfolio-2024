@@ -15,6 +15,7 @@ import { LoadingComponent } from '../loading/loading.component';
 import { GroundService } from '../services/ground.service';
 import { LightingService } from '../services/lightning.service';
 import { ModelService } from '../services/model.service';
+import { RaycasterService } from '../services/raycaster.service';
 
 @Component({
   selector: 'app-scene',
@@ -41,7 +42,8 @@ export class SceneComponent implements AfterViewInit {
     private groundService: GroundService,
     private lightingService: LightingService,
     private ModelService: ModelService,
-    private loadingService: LoadingService
+    private loadingService: LoadingService,
+    private raycasterService: RaycasterService
   ) {}
 
   ngAfterViewInit() {
@@ -53,11 +55,16 @@ export class SceneComponent implements AfterViewInit {
         this.loadingProgress = progress;
       }, 1000);
     });
+    this.raycasterService.initialize(this, this.ModelService);
   }
 
   @HostListener('window:resize')
   onWindowResize() {
     this.cameraService.updateAspectRatio();
     this.rendererService.onResize();
+  }
+
+  getRendererContainer() {
+    return this.rendererContainer;
   }
 }

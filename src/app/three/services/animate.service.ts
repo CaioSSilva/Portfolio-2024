@@ -1,3 +1,4 @@
+import { RaycasterService } from './raycaster.service';
 // src/app/three/animate.service.ts
 import { Injectable } from '@angular/core';
 import { CameraService } from './camera.service';
@@ -13,11 +14,15 @@ export class AnimateService {
     private cameraService: CameraService,
     private sceneService: SceneService,
     private rendererService: RendererService,
-    private orbitControlsService: OrbitControlsService
+    private orbitControlsService: OrbitControlsService,
+    private raycaster: RaycasterService
   ) {}
 
   animate() {
-    requestAnimationFrame(() => this.animate());
+    requestAnimationFrame(() => {
+      this.animate();
+      this.raycaster.animate();
+    });
 
     // Atualiza o cubo e os controles a cada frame
     this.orbitControlsService.updateControls();
