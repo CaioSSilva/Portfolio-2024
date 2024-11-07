@@ -10,8 +10,8 @@ export class SceneService {
   constructor() {
     this.scene = new THREE.Scene();
 
-    this.scene.background = new THREE.Color('#e4e4e4');
-    this.scene.fog = new THREE.Fog('#e4e4e4', 10, 50);
+    this.scene.background = new THREE.Color('#ccc');
+    this.scene.fog = new THREE.Fog('#ccc', 10, 50);
   }
 
   getScene(): THREE.Scene {

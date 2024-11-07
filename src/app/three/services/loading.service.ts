@@ -5,7 +5,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root',
 })
 export class LoadingService {
-  private totalItems = 2;
+  private totalItems = 1;
   private loadedItems = 0;
 
   private loadingProgress = new BehaviorSubject<number>(0);

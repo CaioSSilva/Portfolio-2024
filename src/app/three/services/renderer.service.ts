@@ -13,18 +13,19 @@ export class RendererService {
       antialias: true,
       powerPreference: 'high-performance',
       precision: 'highp',
+      alpha: true,
     });
-    this.renderer.setSize(window.innerWidth, window.innerHeight);
-    this.renderer.shadowMap.enabled = true; // Habilita o cálculo de sombras
+    this.renderer.shadowMap.enabled = true; // Habilita sombras no renderer
     this.renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    this.renderer.setSize(window.innerWidth, window.innerHeight);
   }
 
   getRenderer(): THREE.WebGLRenderer {
     return this.renderer;
   }
 
-  appendRendererToElement(element: ElementRef) {
-    element.nativeElement.appendChild(this.renderer.domElement);
+  appendRendererToElement(element: ElementRef<HTMLDivElement>) {
+    element?.nativeElement.appendChild(this.renderer.domElement);
   }
 
   onResize() {

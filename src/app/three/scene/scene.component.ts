@@ -2,9 +2,9 @@ import { LoadingService } from './../services/loading.service';
 import {
   Component,
   ElementRef,
-  OnInit,
   ViewChild,
   HostListener,
+  AfterViewInit,
 } from '@angular/core';
 import { SceneService } from '../services/scene.service';
 import { CameraService } from '../services/camera.service';
@@ -14,7 +14,7 @@ import { CommonModule } from '@angular/common';
 import { LoadingComponent } from '../loading/loading.component';
 import { GroundService } from '../services/ground.service';
 import { LightingService } from '../services/lightning.service';
-import { LoaderService } from '../services/loader.service';
+import { ModelService } from '../services/model.service';
 
 @Component({
   selector: 'app-scene',
@@ -29,10 +29,10 @@ import { LoaderService } from '../services/loader.service';
     },
   ],
 })
-export class SceneComponent implements OnInit {
+export class SceneComponent implements AfterViewInit {
   loadingProgress: number = 0;
-  @ViewChild('scene', { static: true })
-  rendererContainer!: ElementRef;
+  @ViewChild('scene')
+  rendererContainer!: ElementRef<HTMLDivElement>;
   constructor(
     private sceneService: SceneService,
     private cameraService: CameraService,
@@ -40,17 +40,18 @@ export class SceneComponent implements OnInit {
     private animateService: AnimateService,
     private groundService: GroundService,
     private lightingService: LightingService,
-    private loaderService: LoaderService,
+    private ModelService: ModelService,
     private loadingService: LoadingService
   ) {}
 
-  ngOnInit() {
+  ngAfterViewInit() {
     this.rendererService.appendRendererToElement(this.rendererContainer);
     this.animateService.animate();
 
     this.loadingService.loadingProgress$.subscribe((progress) => {
-      console.log('Progress: ', progress);
-      this.loadingProgress = progress;
+      setTimeout(() => {
+        this.loadingProgress = progress;
+      }, 1000);
     });
   }
 

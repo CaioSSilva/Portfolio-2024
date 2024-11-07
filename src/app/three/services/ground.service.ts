@@ -15,7 +15,7 @@ export class GroundService {
     // Define a geometria e o material para o plano (chão)
     const geometry = new THREE.PlaneGeometry(1000, 1000); // Tamanho do chão
     const material = new THREE.MeshStandardMaterial({
-      color: '#fff',
+      color: '#ccc',
       roughness: 0.8,
       metalness: 0,
     });

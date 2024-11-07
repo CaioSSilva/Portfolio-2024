@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { CameraService } from './camera.service';
 import { SceneService } from './scene.service';
 import { RendererService } from './renderer.service';
-import { CubeService } from './cube.service';
 import { OrbitControlsService } from './orbitControls.service';
 
 @Injectable({
@@ -14,7 +13,6 @@ export class AnimateService {
     private cameraService: CameraService,
     private sceneService: SceneService,
     private rendererService: RendererService,
-    private cubeService: CubeService,
     private orbitControlsService: OrbitControlsService
   ) {}
 
@@ -22,7 +20,6 @@ export class AnimateService {
     requestAnimationFrame(() => this.animate());
 
     // Atualiza o cubo e os controles a cada frame
-    this.cubeService.animateCube();
     this.orbitControlsService.updateControls();
 
     // Renderiza a cena
