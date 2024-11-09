@@ -24,10 +24,8 @@ export class RaycasterService {
 
   onMouseClick(SceneComponent: SceneComponent, ModelService: ModelService) {
     SceneComponent.getRendererContainer().nativeElement.addEventListener(
-      'mousedown',
+      'mouseover',
       (event) => {
-        this.clickCount = this.clickCount + 1;
-
         const model = ModelService.GetModelBase();
         if (!this.mixer) {
           this.mixer = new THREE.AnimationMixer(model.scene);
@@ -42,7 +40,7 @@ export class RaycasterService {
         if (!animationAction) return;
 
         // Control the animation based on the click count
-        if (this.clickCount === 1) {
+        if (animationAction) {
           animationAction.reset();
           animationAction.timeScale = 1;
           animationAction.play();

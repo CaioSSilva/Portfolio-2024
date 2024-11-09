@@ -14,7 +14,6 @@ export class CameraService {
       0.1,
       1000
     );
-    this.camera.lookAt(0, 20, 0);
     this.camera.position.set(-2.63, 10, 15);
   }
 

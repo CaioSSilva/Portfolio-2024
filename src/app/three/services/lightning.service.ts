@@ -13,27 +13,33 @@ export class LightingService {
 
   private addLights() {
     // Luz direcional para sombras
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 3);
-    directionalLight.position.set(0, 8, 1);
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
+    directionalLight.position.set(0, 400, 25);
     directionalLight.castShadow = true;
 
     // Configuração de sombras da luz direcional
-    directionalLight.shadow.mapSize.width = 2048;
-    directionalLight.shadow.mapSize.height = 2048;
-    directionalLight.shadow.camera.near = 1;
-    directionalLight.shadow.camera.far = 20;
-    directionalLight.shadow.camera.left = -10;
-    directionalLight.shadow.camera.right = 10;
-    directionalLight.shadow.camera.top = 10;
-    directionalLight.shadow.camera.bottom = -10;
+    directionalLight.shadow.mapSize.width = 4096;
+    directionalLight.shadow.mapSize.height = 4096;
+    directionalLight.shadow.camera.near = 0.5;
+    directionalLight.shadow.camera.far = 600;
+    directionalLight.shadow.camera.left = -500;
+    directionalLight.shadow.camera.right = 500;
+    directionalLight.shadow.camera.top = 500;
+    directionalLight.shadow.camera.bottom = -500;
+
+    // Ajuste do bias para evitar linhas e artefatos nas sombras
+    directionalLight.shadow.bias = -0.0005; // Valor inicial sugerido, ajuste conforme necessário
+
+    // Suavidade das sombras (shadow.radius)
+    directionalLight.shadow.radius = 4;
 
     this.sceneService.getScene().add(directionalLight);
 
     // Luz ambiente para iluminação suave
-    const ambientLight = new THREE.AmbientLight(0xffffff, 1);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 2);
     this.sceneService.getScene().add(ambientLight);
 
-    const lightHelper = new THREE.CameraHelper(directionalLight.shadow.camera);
-    //this.sceneService.getScene().add(lightHelper);
+    const lightHelper = new THREE.DirectionalLightHelper(directionalLight);
+    this.sceneService.getScene().add(lightHelper);
   }
 }

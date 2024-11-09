@@ -28,8 +28,6 @@ export class ModelService {
             node.receiveShadow = true;
           }
         });
-        gltf.scene.position.set(-1, 0, 0);
-        gltf.scene.scale.set(0.05, 0.05, 0.05);
         gltf.scene.castShadow = true;
         gltf.scene.receiveShadow = true;
         this.sceneService.getScene().add(gltf.scene);
