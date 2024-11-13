@@ -11,7 +11,7 @@ export class SceneService {
     this.scene = new THREE.Scene();
 
     this.scene.background = new THREE.Color('#ccc');
-    this.scene.fog = new THREE.Fog('#ccc', 100, 500);
+    this.scene.fog = new THREE.Fog('#ccc', 150, 500);
   }
 
   getScene(): THREE.Scene {

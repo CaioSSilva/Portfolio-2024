@@ -1,5 +1,3 @@
-import { ModelService } from './model.service';
-import { SceneComponent } from './../scene/scene.component';
 import { Injectable } from '@angular/core';
 import * as THREE from 'three';
 
@@ -7,7 +5,6 @@ import * as THREE from 'three';
   providedIn: 'root',
 })
 export class RaycasterService {
-  private clickCount = 0;
   private mouse: THREE.Vector2;
   private raycaster: THREE.Raycaster;
   private mixer: THREE.AnimationMixer | null = null;
@@ -18,11 +15,15 @@ export class RaycasterService {
     this.mouse = new THREE.Vector2();
   }
 
-  initialize(SceneComponent: SceneComponent, ModelService: ModelService) {
-    this.onMouseClick(SceneComponent, ModelService);
+  initialize() {}
+
+  animate() {
+    if (this.mixer) {
+      this.mixer.update(0.01); // Adjust the delta time as needed
+    }
   }
 
-  onMouseClick(SceneComponent: SceneComponent, ModelService: ModelService) {
+  /* onMouseClick(SceneComponent: SceneComponent, ModelService: ModelService) {
     SceneComponent.getRendererContainer().nativeElement.addEventListener(
       'mouseover',
       (event) => {
@@ -49,11 +50,5 @@ export class RaycasterService {
         }
       }
     );
-  }
-
-  animate() {
-    if (this.mixer) {
-      this.mixer.update(0.01); // Adjust the delta time as needed
-    }
-  }
+  }*/
 }

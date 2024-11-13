@@ -14,7 +14,7 @@ export class CameraService {
       0.1,
       1000
     );
-    this.camera.position.set(-2.63, 10, 15);
+    this.camera.position.set(-82, 175, 221);
   }
 
   getCamera(): THREE.PerspectiveCamera {

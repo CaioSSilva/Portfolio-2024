@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-
+import { LoadingService } from '../services/loading.service';
 @Component({
   selector: 'app-loading',
   standalone: true,
@@ -8,4 +8,12 @@ import { Component } from '@angular/core';
   templateUrl: './loading.component.html',
   styleUrl: './loading.component.css',
 })
-export class LoadingComponent {}
+export class LoadingComponent {
+  public progress = 0;
+
+  constructor(private loading: LoadingService) {
+    loading.loadingProgress$.subscribe((value) => {
+      this.progress = value;
+    });
+  }
+}

@@ -55,7 +55,7 @@ export class SceneComponent implements AfterViewInit {
         this.loadingProgress = progress;
       }, 1000);
     });
-    this.raycasterService.initialize(this, this.ModelService);
+    //this.raycasterService.initialize();
   }
 
   @HostListener('window:resize')
