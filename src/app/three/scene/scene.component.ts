@@ -41,7 +41,7 @@ export class SceneComponent implements AfterViewInit {
     private animateService: AnimateService,
     private groundService: GroundService,
     private lightingService: LightingService,
-    private ModelService: ModelService,
+    private modelService: ModelService,
     private loadingService: LoadingService,
     private raycasterService: RaycasterService
   ) {}
@@ -55,7 +55,7 @@ export class SceneComponent implements AfterViewInit {
         this.loadingProgress = progress;
       }, 1000);
     });
-    //this.raycasterService.initialize();
+    this.raycasterService.initialize();
   }
 
   @HostListener('window:resize')

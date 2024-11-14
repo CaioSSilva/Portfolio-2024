@@ -11,8 +11,8 @@
   <app-cursor></app-cursor>
   <app-scrollup></app-scrollup>
   <app-language (langChangeEvent)="changeLang($event)"></app-language>
+  <app-switch></app-switch>
   <!--(DimensionChangeEvent)="changeDimension($event)"-->
-  <app-switch (DimensionChangeEvent)="changeDimension($event)"></app-switch>
 </main>
 <div id="scene-container" *ngIf="isThreeDimesional">
   <app-scene></app-scene>

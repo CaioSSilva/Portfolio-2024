@@ -30,10 +30,10 @@ export class OrbitControlsService {
     this.controls.maxPolarAngle = Math.PI / 2.5;
 
     // Limitar a distância de zoom
-    this.controls.minDistance = 100;
-    this.controls.maxDistance = 300;
+    this.controls.minDistance = 80;
+    this.controls.maxDistance = 255;
 
-    this.controls.target.set(-1, 4, 0);
+    this.controls.target.set(-1, 90, 0);
   }
 
   // Método para atualizar os controles a cada frame

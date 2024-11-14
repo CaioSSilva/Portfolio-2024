@@ -39,7 +39,6 @@ export class ModelService {
   }
 
   public GetModelBase() {
-    console.log(this.modelBase);
     return this.modelBase;
   }
 }

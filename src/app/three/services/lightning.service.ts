@@ -36,23 +36,21 @@ export class LightingService {
     // Luz ambiente para iluminação suave
     const ambientLight = new THREE.AmbientLight(0xffffff, 2);
 
-    const pointLight = new THREE.PointLight(0xffffff, 700, 200);
+    const spotLight = new THREE.SpotLight(0xffffff, 1300, 500, 70);
 
-    pointLight.position.set(40, 90, 12);
+    spotLight.position.set(40, 92, 12);
 
-    pointLight.castShadow = true;
-    pointLight.shadow.mapSize;
-    pointLight.shadow.mapSize.width = 1024;
-    pointLight.shadow.mapSize.height = 1024;
-    pointLight.shadow.camera.near = 0.5;
-    pointLight.shadow.camera.far = 600;
+    spotLight.castShadow = true;
+    spotLight.shadow.mapSize;
+    spotLight.shadow.mapSize.width = 1024;
+    spotLight.shadow.mapSize.height = 1024;
+    spotLight.shadow.camera.near = 0.5;
+    spotLight.shadow.camera.far = 600;
 
-    this.sceneService
-      .getScene()
-      .add(pointLight, directionalLight, ambientLight);
+    this.sceneService.getScene().add(spotLight, directionalLight, ambientLight);
 
     const dirHelper = new THREE.DirectionalLightHelper(directionalLight);
-    const pointHelper = new THREE.PointLightHelper(pointLight);
-    //this.sceneService.getScene().add(dirHelper, pointHelper);
+    const spotHelper = new THREE.SpotLightHelper(spotLight);
+    //this.sceneService.getScene().add(dirHelper, spotHelper);
   }
 }
