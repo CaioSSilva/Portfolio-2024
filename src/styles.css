@@ -65,10 +65,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-.main {
   cursor: none !important;
+  box-sizing: border-box;
 }
 
 .color__container:hover ~ #ball {
@@ -121,19 +119,6 @@ img {
   height: auto;
 }
 
-div,
-fa-icon,
-textarea,
-button,
-a,
-input,
-label {
-  cursor: none !important;
-}
-#scene-container {
-  cursor: default !important;
-  overflow: hidden;
-}
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section {
   padding: 6rem 0 2rem;

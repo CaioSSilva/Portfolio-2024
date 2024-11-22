@@ -1,4 +1,4 @@
-<main class="main" *ngIf="!isThreeDimesional">
+<main class="main">
   <app-header></app-header>
   <app-home></app-home>
   <app-about></app-about>
@@ -6,14 +6,9 @@
   <app-qualifications></app-qualifications>
   <app-portfolio></app-portfolio>
   <app-contact></app-contact>
-
-  <app-footer></app-footer>
-  <app-cursor></app-cursor>
-  <app-scrollup></app-scrollup>
-  <app-language (langChangeEvent)="changeLang($event)"></app-language>
-  <app-switch></app-switch>
-  <!--(DimensionChangeEvent)="changeDimension($event)"-->
 </main>
-<div id="scene-container" *ngIf="isThreeDimesional">
-  <app-scene></app-scene>
-</div>
+
+<app-cursor></app-cursor>
+<app-footer></app-footer>
+<app-scrollup></app-scrollup>
+<app-language (langChangeEvent)="changeLang($event)"></app-language>

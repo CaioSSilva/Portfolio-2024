@@ -5,8 +5,8 @@
   display: flex;
   flex: start;
   align-items: center;
-  left: 0.8rem;
-  bottom: 4rem;
+  left: 1.5rem;
+  bottom: 3rem;
   background-color: var(--title-color);
   padding: 0.5rem;
   border-radius: 0.4rem;
@@ -28,8 +28,8 @@
   padding: 5px;
   width: 135px;
   background-color: var(--title-color);
-  left: 0.8rem;
-  bottom: 7rem;
+  left: 1.5rem;
+  bottom: 6rem;
   transition: 0.4s;
   border-radius: 6px;
   text-align: center;
@@ -69,10 +69,10 @@
 /* For medium devices */
 @media screen and (max-width: 768px) {
   .language {
-    bottom: 7rem;
+    bottom: 4rem;
   }
   .menu {
-    bottom: 10rem;
+    bottom: 7rem;
   }
 }
 /* For small devices */
