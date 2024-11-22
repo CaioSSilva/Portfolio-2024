@@ -18,7 +18,7 @@
     "@angular/platform-browser": "^18.2.12",
     "@angular/platform-browser-dynamic": "^18.2.12",
     "@angular/router": "^18.2.12",
-    "@fortawesome/angular-fontawesome": "^0.14.1",
+    "@fortawesome/angular-fontawesome": "1.0.0",
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
@@ -29,7 +29,6 @@
     "gsap": "^3.12.5",
     "lru-cache": "^11.0.2",
     "rxjs": "~7.8.0",
-    "three": "^0.165.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
   },
