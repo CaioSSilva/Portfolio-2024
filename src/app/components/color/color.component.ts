@@ -4,11 +4,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faPaintBrush } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-color',
-  standalone: true,
-  imports: [CommonModule, FontAwesomeModule],
-  templateUrl: './color.component.html',
-  styleUrls: ['./color.component.css'],
+    selector: 'app-color',
+    imports: [CommonModule, FontAwesomeModule],
+    templateUrl: './color.component.html',
+    styleUrls: ['./color.component.css']
 })
 export class ColorComponent {
   menuOpened: boolean = false;

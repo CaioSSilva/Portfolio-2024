@@ -5,11 +5,10 @@ import { IMusic } from 'src/app/interfaces/IMusic';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-playingnow',
-  standalone: true,
-  imports: [CommonModule, TranslateModule],
-  templateUrl: './playingnow.component.html',
-  styleUrls: ['./playingnow.component.css'],
+    selector: 'app-playingnow',
+    imports: [CommonModule, TranslateModule],
+    templateUrl: './playingnow.component.html',
+    styleUrls: ['./playingnow.component.css']
 })
 export class PlayingnowComponent {
   music: IMusic = {

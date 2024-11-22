@@ -2,11 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import gsap from 'gsap';
 
 @Component({
-  selector: 'app-cursor',
-  standalone: true,
-  imports: [],
-  templateUrl: './cursor.component.html',
-  styleUrl: './cursor.component.css',
+    selector: 'app-cursor',
+    imports: [],
+    templateUrl: './cursor.component.html',
+    styleUrl: './cursor.component.css'
 })
 export class CursorComponent implements OnInit {
   ngOnInit() {

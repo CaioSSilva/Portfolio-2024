@@ -6,11 +6,10 @@ import { TranslateModule } from '@ngx-translate/core';
 import gsap from 'gsap';
 
 @Component({
-  selector: 'app-skills',
-  standalone: true,
-  imports: [CommonModule, FontAwesomeModule, TranslateModule],
-  templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.css'],
+    selector: 'app-skills',
+    imports: [CommonModule, FontAwesomeModule, TranslateModule],
+    templateUrl: './skills.component.html',
+    styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent implements AfterViewInit {
   check = faCircleCheck;

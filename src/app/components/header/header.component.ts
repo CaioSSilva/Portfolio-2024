@@ -13,11 +13,10 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { TranslateModule } from '@ngx-translate/core';
 @Component({
-  selector: 'app-header',
-  standalone: true,
-  imports: [CommonModule, FontAwesomeModule, TranslateModule],
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css'],
+    selector: 'app-header',
+    imports: [CommonModule, FontAwesomeModule, TranslateModule],
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.css']
 })
 export class HeaderComponent{
   homeIcon = faHome;

@@ -4,11 +4,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-scrollup',
-  standalone: true,
-  imports: [CommonModule, FontAwesomeModule],
-  templateUrl: './scrollup.component.html',
-  styleUrls: ['./scrollup.component.css'],
+    selector: 'app-scrollup',
+    imports: [CommonModule, FontAwesomeModule],
+    templateUrl: './scrollup.component.html',
+    styleUrls: ['./scrollup.component.css']
 })
 export class ScrollupComponent {
   arrowupIcon = faArrowUp;

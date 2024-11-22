@@ -5,11 +5,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-language',
-  standalone: true,
-  imports: [CommonModule, FontAwesomeModule, TranslateModule],
-  templateUrl: './language.component.html',
-  styleUrls: ['./language.component.css'],
+    selector: 'app-language',
+    imports: [CommonModule, FontAwesomeModule, TranslateModule],
+    templateUrl: './language.component.html',
+    styleUrls: ['./language.component.css']
 })
 export class LanguageComponent {
   @Output() langChangeEvent = new EventEmitter<string>();

@@ -11,16 +11,15 @@ import { TranslateModule } from '@ngx-translate/core';
 import gsap from 'gsap';
 
 @Component({
-  selector: 'app-about',
-  standalone: true,
-  imports: [
-    CommonModule,
-    PlayingnowComponent,
-    FontAwesomeModule,
-    TranslateModule,
-  ],
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css'],
+    selector: 'app-about',
+    imports: [
+        CommonModule,
+        PlayingnowComponent,
+        FontAwesomeModule,
+        TranslateModule,
+    ],
+    templateUrl: './about.component.html',
+    styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements AfterViewInit {
   opened: boolean = false;

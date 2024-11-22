@@ -13,11 +13,10 @@ import { ColorComponent } from '../color/color.component';
 import { TranslateModule } from '@ngx-translate/core';
 import gsap from 'gsap';
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [CommonModule, FontAwesomeModule, TranslateModule, ColorComponent],
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
+    selector: 'app-home',
+    imports: [CommonModule, FontAwesomeModule, TranslateModule, ColorComponent],
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements AfterViewInit {
   instaIcon = faInstagram;

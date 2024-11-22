@@ -13,11 +13,10 @@ import { IQualification } from 'src/app/interfaces/IQualification';
 import { TranslateModule } from '@ngx-translate/core';
 import gsap from 'gsap';
 @Component({
-  selector: 'app-qualifications',
-  standalone: true,
-  imports: [CommonModule, FontAwesomeModule, TranslateModule],
-  templateUrl: './qualifications.component.html',
-  styleUrls: ['./qualifications.component.css'],
+    selector: 'app-qualifications',
+    imports: [CommonModule, FontAwesomeModule, TranslateModule],
+    templateUrl: './qualifications.component.html',
+    styleUrls: ['./qualifications.component.css']
 })
 export class QualificationsComponent implements AfterViewInit {
   filterIcon = faFilter;

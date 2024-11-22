@@ -11,11 +11,10 @@ import { TranslateModule } from '@ngx-translate/core';
 import gsap from 'gsap';
 
 @Component({
-  selector: 'app-contact',
-  standalone: true,
-  imports: [CommonModule, FontAwesomeModule, TranslateModule],
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css'],
+    selector: 'app-contact',
+    imports: [CommonModule, FontAwesomeModule, TranslateModule],
+    templateUrl: './contact.component.html',
+    styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements AfterViewInit {
   discordIcon = faDiscord;

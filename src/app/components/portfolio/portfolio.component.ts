@@ -7,11 +7,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-portfolio',
-  standalone: true,
-  imports: [CommonModule, FontAwesomeModule, TranslateModule],
-  templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.css'],
+    selector: 'app-portfolio',
+    imports: [CommonModule, FontAwesomeModule, TranslateModule],
+    templateUrl: './portfolio.component.html',
+    styleUrls: ['./portfolio.component.css']
 })
 export class PortfolioComponent {
   arrowRight = faArrowRight;
